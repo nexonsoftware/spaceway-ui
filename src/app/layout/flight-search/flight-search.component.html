@@ -1,0 +1,205 @@
+<div class="form-group">
+  <mat-radio-group [(ngModel)]="favoriteSeason">
+    <mat-radio-button
+    (change)="radioChange($event)"
+    color="primary"
+    *ngFor="let type of types"
+    [value]="type"
+    >{{ type }}</mat-radio-button
+    >
+  </mat-radio-group>
+</div>
+<form [formGroup]="searchForm" (ngSubmit)="searchFlights()">
+  <ul class="searchElement">
+    <ng-container
+    formArrayName="arr"
+    *ngFor="let item of arr.controls; let i = index"
+    >
+    <ng-container [formGroupName]="i">
+      <li>
+        <mat-form-field appearance="fill">
+          <mat-label>Form</mat-label>
+          <mat-icon matPrefix class="material-icons-outlined">place</mat-icon>
+          <input
+          type="text"
+          placeholder="Form"
+          matInput
+          formControlName="formFormControl"
+          [matAutocomplete]="from"
+          (keyup)="getFromLoation(i)"
+          />
+          <mat-autocomplete autoActiveFirstOption #from="matAutocomplete" (optionSelected)="clearFromLoation()">
+            <mat-option
+            *ngFor="let option of fromCityOptions"
+            [value]="option.name"
+            
+            >
+            {{ option.name }}
+          </mat-option>
+        </mat-autocomplete>
+        
+        <mat-error
+        align="end"
+        *ngIf="arr.controls[i].get('formFormControl')?.errors"
+        >
+        Form destination is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+  </li>
+  <li>
+    <mat-form-field appearance="fill">
+      <mat-label>To</mat-label>
+      <mat-icon matPrefix class="material-icons-outlined">place</mat-icon>
+      <input
+      type="search"
+      placeholder="to"
+      matInput
+      required
+      formControlName="toFormControl"
+      [matAutocomplete]="to"
+      (keyup)="getToLoation(i)"
+      />
+      <mat-autocomplete autoActiveFirstOption #to="matAutocomplete" (optionSelected)="clearToLoation()">
+        <mat-option
+        *ngFor="let option of toCityOptions"
+        [value]="option.name"
+        >
+        {{ option.name }}
+      </mat-option>
+    </mat-autocomplete>
+    
+    <mat-error
+    align="end"
+    *ngIf="arr.controls[i].get('toFormControl')?.errors"
+    >
+    To destination is <strong>required</strong>
+  </mat-error>
+</mat-form-field>
+</li>
+
+<li>
+  <mat-form-field appearance="fill">
+    <mat-label>Departure</mat-label>
+    <input
+    matInput
+    [min]="today"
+    [matDatepicker]="picker"
+    placeholder="M/DD/YYYY"
+    formControlName="departure"
+    />
+    <mat-datepicker-toggle matPrefix [for]="picker" >
+      <mat-icon matDatepickerToggleIcon>calendar_month</mat-icon>
+    </mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+    <mat-error
+    align="end"
+    *ngIf="arr.controls[i].get('departure')?.errors"
+    >
+    Departure date is <strong>required</strong>
+  </mat-error>
+</mat-form-field>
+<button type="button" (click)="deleteLesson(i)" mat-icon-button *ngIf="i > 1" color="warn">
+  <mat-icon>delete</mat-icon>
+</button>
+</li>
+</ng-container>
+</ng-container>
+<li class="w-100 mb-3 mt-2" *ngIf="favoriteSeason === 'Multi-city'">		
+  <button
+  type="button"
+  mat-stroked-button
+  color="primary"
+  class="btn-block btn-sm"
+  (click)="addCity()"
+  >
+  Add City
+</button>
+</li>
+<li *ngIf="favoriteSeason === 'Round-trip'">
+  <mat-form-field appearance="fill">
+    <mat-label>Departure - Return</mat-label>
+    <mat-date-range-input [rangePicker]="range">
+      <input
+      matStartDate
+      placeholder="M/DD/YYYY"
+      formControlName="departureFromDate"
+      />
+      <input
+      matEndDate
+      placeholder="M/DD/YYYY"
+      formControlName="departureToDate"
+      />
+    </mat-date-range-input>
+    <mat-datepicker-toggle matPrefix [for]="range">
+      <mat-icon matDatepickerToggleIcon>calendar_month</mat-icon>
+    </mat-datepicker-toggle>
+    <mat-date-range-picker #range></mat-date-range-picker>
+    <mat-error
+    align="end"
+    *ngIf="searchForm.controls['departureFromDate'].hasError('required')"
+    >
+    Departure From date is <strong>required</strong>
+  </mat-error>
+  <mat-error
+  align="end"
+  *ngIf="searchForm.controls['departureToDate'].hasError('required')"
+  >
+  Departure To date is <strong>required</strong>
+</mat-error>
+</mat-form-field>
+</li>
+
+<li>
+  <mat-form-field appearance="fill" matTooltip="{{ travel }}">
+    <mat-label>Travellers</mat-label>
+    <mat-icon matPrefix class="material-icons-outlined">people</mat-icon>
+    <input
+    matInput
+    (click)="travellerDialog()"
+    formControlName="travellersFormControl"
+    required
+    autocomplete="off"
+    />
+    <mat-error
+    align="end"
+    *ngIf="
+    searchForm.controls['travellersFormControl'].hasError('required')
+    "
+    >
+    Travellers info is <strong>required</strong>
+  </mat-error>
+</mat-form-field>
+</li>
+<li>
+  <mat-form-field appearance="fill">
+    <mat-label>Class</mat-label>
+    <mat-icon matPrefix class="material-icons-outlined"
+    >accessible</mat-icon
+    >
+    <mat-select formControlName="classFormControl" required="">
+      <mat-option *ngFor="let travel of travels" [value]="travel.value">
+        {{ travel.viewValue }}
+      </mat-option>
+    </mat-select>
+    <mat-error
+    *ngIf="searchForm.controls['classFormControl'].hasError('required')"
+    >
+    Class is <strong>required</strong>
+  </mat-error>
+</mat-form-field>
+</li>
+<li>
+  <div class="form-group">
+    <button
+    type="submit"
+    mat-flat-button
+    color="primary"
+    class="btn-block btn-lg"
+    >
+    Search
+  </button>
+</div>
+</li>
+<!-- <div (click)="travellerDialog()">asd</div> -->
+</ul>
+</form>

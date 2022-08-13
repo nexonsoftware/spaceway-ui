@@ -1,0 +1,884 @@
+<app-header></app-header>
+<div class="main">
+    <section class="subBanner">
+        <div class="imgSection">
+            <img src="assets/images/banner1.jpg" alt="banner">
+        </div>
+        <div class="container-xl">
+            <div class="row align-items-center gutter-5">
+                <div class="col">
+                    <h2 class="banner-heading fontLobster">Dubai Tours</h2>
+                    <h6 class="banner-text">Life is a journey,But life is short, and the world is wide</h6>
+                </div>
+                <div class="col-auto">
+                    <mat-form-field appearance="outline" color="white" class="rounded">
+                        <mat-icon matPrefix>search</mat-icon>
+                        <input matInput placeholder="Search here...">
+                    </mat-form-field>
+                </div>
+                <div class="col-auto">
+                    <div class="form-group" appearance="outline">
+                        <button mat-stroked-button [matMenuTriggerFor]="menu" matTooltip="Sort By" color="white" class="btn-box fill-btn">
+							<mat-icon>sort</mat-icon>
+						</button>
+                        <button mat-stroked-button color="white" class="btn-box fill-btn" matTooltip="{{ListView ? 'Grid View' : 'List View'}}" (click)="ListView = !ListView;">
+							<mat-icon>
+								{{ListView ? 'view_module' : 'view_list'}}
+							</mat-icon>
+						</button>
+                        <mat-menu #menu="matMenu">
+                            <button mat-menu-item>POPULAR</button>
+                            <button mat-menu-item>RECENT</button>
+                            <button mat-menu-item>DURATION</button>
+                            <button mat-menu-item>PRICE</button>
+                        </mat-menu>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="module pt-0" bgColor="gray">
+        <div [ngClass]="ListView ? 'container' : 'container-xl'">
+            <div aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item" [routerLink]="['/']">Home</li>
+                    <li class="breadcrumb-item" [routerLink]="['/tour']">Tour</li>
+                    <li class="breadcrumb-item active" aria-current="page">Tour Listing</li>
+                </ol>
+            </div>
+            <ul class="tourListing" [ngClass]="ListView ? 'listView' : ''">
+                <li>
+                    <div class="card box" matTooltip="Dubai Holiday 3N - Super Saver" [routerLink]="['/tour-details']">
+                        <div class="cardImageWrapper" dataLable="4:3">
+                            <div class="cardImage">
+                                <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3147/ZO.jpg?crop=370:240&downsize=370:240" alt="">
+                            </div>
+                            <div class="cardImageShadow"></div>
+                            <div class="cardDay">3N/4D</div>
+                        </div>
+                        <div class="cardFooter">
+                            <div class="cardPrice ">
+                                <span>$4,500</span> $3,564
+                                <div class="cardOffer mt-0">per person</div>
+                            </div>
+                            <ul class="cardAmenity">
+                                <li>
+                                    <mat-icon>flight</mat-icon>
+                                    Flight
+                                </li>
+                                <li>
+                                    <mat-icon>apartment</mat-icon>
+                                    Hotel
+                                </li>
+                                <li>
+                                    <mat-icon>hiking</mat-icon>
+                                    Activity
+                                </li>
+                                <li>
+                                    <mat-icon>directions_bus</mat-icon>
+                                    Transfar
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cardBody">
+                            <div class="cardHeading text-ellipsis">Dubai Holiday 3N - Super Saver</div>
+                            <div class="cardDes text-clamp ">Nature at its best! Thick luscious foliage, relaxed backwaters, blissful temples and synagogues, coral beaches and serene lakes</div>
+                            <div class="cardPrice ">$3,564
+                                <span>$4,500</span>
+                                <div class="cardOffer mt-0">per person</div>
+                            </div>
+                            <ul class="cardAmenity">
+                                <li>
+                                    <mat-icon>restaurant</mat-icon>
+                                    Meals
+                                </li>
+                                <li>
+                                    <mat-icon>flight</mat-icon>
+                                    Flight
+                                </li>
+                                <li>
+                                    <mat-icon>apartment</mat-icon>
+                                    Hotel
+                                </li>
+                                <li>
+                                    <mat-icon>hiking</mat-icon>
+                                    Activity
+                                </li>
+                                <li>
+                                    <mat-icon>directions_bus</mat-icon>
+                                    Transfar
+                                </li>
+                                <li>
+                                    <mat-icon>camera</mat-icon>
+                                    Sightseeing
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card box" matTooltip="Family Special Dubai Shopping Holiday" [routerLink]="['/tour-details']">
+                        <div class="cardImageWrapper" dataLable="4:3">
+                            <div class="cardImage">
+                                <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3147/Dubai-Fountain.jpg?crop=370:240&downsize=370:240" alt="">
+                            </div>
+                            <div class="cardImageShadow"></div>
+                            <div class="cardDay">3N/4D</div>
+                        </div>
+                        <div class="cardFooter">
+                            <div class="cardPrice ">
+                                <span>$4,500</span> $3,564
+                                <div class="cardOffer mt-0">per person</div>
+                            </div>
+                            <ul class="cardAmenity">
+                                <li>
+                                    <mat-icon>flight</mat-icon>
+                                    Flight
+                                </li>
+                                <li>
+                                    <mat-icon>apartment</mat-icon>
+                                    Hotel
+                                </li>
+                                <li>
+                                    <mat-icon>hiking</mat-icon>
+                                    Activity
+                                </li>
+                                <li>
+                                    <mat-icon>directions_bus</mat-icon>
+                                    Transfar
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cardBody">
+                            <div class="cardHeading text-ellipsis">Family Special Dubai Shopping Holiday</div>
+                            <div class="cardDes text-clamp ">Nature at its best! Thick luscious foliage, relaxed backwaters, blissful temples and synagogues, coral beaches and serene lakes</div>
+                            <div class="cardPrice ">$3,564
+                                <span>$4,500</span>
+                                <div class="cardOffer mt-0">per person</div>
+                            </div>
+                            <ul class="cardAmenity">
+                                <li>
+                                    <mat-icon>restaurant</mat-icon>
+                                    Meals
+                                </li>
+                                <li>
+                                    <mat-icon>flight</mat-icon>
+                                    Flight
+                                </li>
+                                <li>
+                                    <mat-icon>apartment</mat-icon>
+                                    Hotel
+                                </li>
+                                <li>
+                                    <mat-icon>hiking</mat-icon>
+                                    Activity
+                                </li>
+                                <li>
+                                    <mat-icon>directions_bus</mat-icon>
+                                    Transfar
+                                </li>
+                                <li>
+                                    <mat-icon>camera</mat-icon>
+                                    Sightseeing
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card box" matTooltip="Top Attractions-Dubai Holidays (Family Friendly)" [routerLink]="['/tour-details']">
+                        <div class="cardImageWrapper" dataLable="4:3">
+                            <div class="cardImage">
+                                <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3147/ZB.jpg?crop=370:240&downsize=370:240" alt="">
+                            </div>
+                            <div class="cardImageShadow"></div>
+                            <div class="cardDay">3N/4D</div>
+                        </div>
+                        <div class="cardFooter">
+                            <div class="cardPrice ">
+                                <span>$4,500</span> $3,564
+                                <div class="cardOffer mt-0">per person</div>
+                            </div>
+                            <ul class="cardAmenity">
+                                <li>
+                                    <mat-icon>flight</mat-icon>
+                                    Flight
+                                </li>
+                                <li>
+                                    <mat-icon>apartment</mat-icon>
+                                    Hotel
+                                </li>
+                                <li>
+                                    <mat-icon>hiking</mat-icon>
+                                    Activity
+                                </li>
+                                <li>
+                                    <mat-icon>directions_bus</mat-icon>
+                                    Transfar
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cardBody">
+                            <div class="cardHeading text-ellipsis">Top Attractions-Dubai Holidays (Family Friendly)</div>
+                            <div class="cardDes text-clamp ">Nature at its best! Thick luscious foliage, relaxed backwaters, blissful temples and synagogues, coral beaches and serene lakes</div>
+                            <div class="cardPrice ">$3,564
+                                <span>$4,500</span>
+                                <div class="cardOffer mt-0">per person</div>
+                            </div>
+                            <ul class="cardAmenity">
+                                <li>
+                                    <mat-icon>restaurant</mat-icon>
+                                    Meals
+                                </li>
+                                <li>
+                                    <mat-icon>flight</mat-icon>
+                                    Flight
+                                </li>
+                                <li>
+                                    <mat-icon>apartment</mat-icon>
+                                    Hotel
+                                </li>
+                                <li>
+                                    <mat-icon>hiking</mat-icon>
+                                    Activity
+                                </li>
+                                <li>
+                                    <mat-icon>directions_bus</mat-icon>
+                                    Transfar
+                                </li>
+                                <li>
+                                    <mat-icon>camera</mat-icon>
+                                    Sightseeing
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card box" matTooltip="Magical Dubai 3N with 2N Atlantis" [routerLink]="['/tour-details']">
+                        <div class="cardImageWrapper" dataLable="4:3">
+                            <div class="cardImage">
+                                <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3147/The-multi-million-dollar-Atlantis-Resort.jpg?crop=370:240&downsize=370:240" alt="">
+                            </div>
+                            <div class="cardImageShadow"></div>
+                            <div class="cardDay">3N/4D</div>
+                        </div>
+                        <div class="cardFooter">
+                            <div class="cardPrice ">
+                                <span>$4,500</span> $3,564
+                                <div class="cardOffer mt-0">per person</div>
+                            </div>
+                            <ul class="cardAmenity">
+                                <li>
+                                    <mat-icon>flight</mat-icon>
+                                    Flight
+                                </li>
+                                <li>
+                                    <mat-icon>apartment</mat-icon>
+                                    Hotel
+                                </li>
+                                <li>
+                                    <mat-icon>hiking</mat-icon>
+                                    Activity
+                                </li>
+                                <li>
+                                    <mat-icon>directions_bus</mat-icon>
+                                    Transfar
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cardBody">
+                            <div class="cardHeading text-ellipsis">Magical Dubai 3N with 2N Atlantis</div>
+                            <div class="cardDes text-clamp ">Nature at its best! Thick luscious foliage, relaxed backwaters, blissful temples and synagogues, coral beaches and serene lakes</div>
+                            <div class="cardPrice ">$3,564
+                                <span>$4,500</span>
+                                <div class="cardOffer mt-0">per person</div>
+                            </div>
+                            <ul class="cardAmenity">
+                                <li>
+                                    <mat-icon>restaurant</mat-icon>
+                                    Meals
+                                </li>
+                                <li>
+                                    <mat-icon>flight</mat-icon>
+                                    Flight
+                                </li>
+                                <li>
+                                    <mat-icon>apartment</mat-icon>
+                                    Hotel
+                                </li>
+                                <li>
+                                    <mat-icon>hiking</mat-icon>
+                                    Activity
+                                </li>
+                                <li>
+                                    <mat-icon>directions_bus</mat-icon>
+                                    Transfar
+                                </li>
+                                <li>
+                                    <mat-icon>camera</mat-icon>
+                                    Sightseeing
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card box" matTooltip="Gevora stay at Worlds Tallest Hotel" [routerLink]="['/tour-details']">
+                        <div class="cardImageWrapper" dataLable="4:3">
+                            <div class="cardImage">
+                                <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3147/L.jpg?crop=370:240&downsize=370:240" alt="">
+                            </div>
+                            <div class="cardImageShadow"></div>
+                            <div class="cardDay">3N/4D</div>
+                        </div>
+                        <div class="cardFooter">
+                            <div class="cardPrice ">
+                                <span>$4,500</span> $3,564
+                                <div class="cardOffer mt-0">per person</div>
+                            </div>
+                            <ul class="cardAmenity">
+                                <li>
+                                    <mat-icon>flight</mat-icon>
+                                    Flight
+                                </li>
+                                <li>
+                                    <mat-icon>apartment</mat-icon>
+                                    Hotel
+                                </li>
+                                <li>
+                                    <mat-icon>hiking</mat-icon>
+                                    Activity
+                                </li>
+                                <li>
+                                    <mat-icon>directions_bus</mat-icon>
+                                    Transfar
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cardBody">
+                            <div class="cardHeading text-ellipsis">Gevora stay at Worlds Tallest Hotel</div>
+                            <div class="cardDes text-clamp ">Nature at its best! Thick luscious foliage, relaxed backwaters, blissful temples and synagogues, coral beaches and serene lakes</div>
+                            <div class="cardPrice ">$3,564
+                                <span>$4,500</span>
+                                <div class="cardOffer mt-0">per person</div>
+                            </div>
+                            <ul class="cardAmenity">
+                                <li>
+                                    <mat-icon>restaurant</mat-icon>
+                                    Meals
+                                </li>
+                                <li>
+                                    <mat-icon>flight</mat-icon>
+                                    Flight
+                                </li>
+                                <li>
+                                    <mat-icon>apartment</mat-icon>
+                                    Hotel
+                                </li>
+                                <li>
+                                    <mat-icon>hiking</mat-icon>
+                                    Activity
+                                </li>
+                                <li>
+                                    <mat-icon>directions_bus</mat-icon>
+                                    Transfar
+                                </li>
+                                <li>
+                                    <mat-icon>camera</mat-icon>
+                                    Sightseeing
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card box" matTooltip="Stay at Citymax Hotel Bur Dubai" [routerLink]="['/tour-details']">
+                        <div class="cardImageWrapper" dataLable="4:3">
+                            <div class="cardImage">
+                                <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3147/C.jpg?crop=370:240&downsize=370:240" alt="">
+                            </div>
+                            <div class="cardImageShadow"></div>
+                            <div class="cardDay">3N/4D</div>
+                        </div>
+                        <div class="cardFooter">
+                            <div class="cardPrice ">
+                                <span>$4,500</span> $3,564
+                                <div class="cardOffer mt-0">per person</div>
+                            </div>
+                            <ul class="cardAmenity">
+                                <li>
+                                    <mat-icon>flight</mat-icon>
+                                    Flight
+                                </li>
+                                <li>
+                                    <mat-icon>apartment</mat-icon>
+                                    Hotel
+                                </li>
+                                <li>
+                                    <mat-icon>hiking</mat-icon>
+                                    Activity
+                                </li>
+                                <li>
+                                    <mat-icon>directions_bus</mat-icon>
+                                    Transfar
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cardBody">
+                            <div class="cardHeading text-ellipsis">Stay at Citymax Hotel Bur Dubai</div>
+                            <div class="cardDes text-clamp ">Nature at its best! Thick luscious foliage, relaxed backwaters, blissful temples and synagogues, coral beaches and serene lakes</div>
+                            <div class="cardPrice ">$3,564
+                                <span>$4,500</span>
+                                <div class="cardOffer mt-0">per person</div>
+                            </div>
+                            <ul class="cardAmenity">
+                                <li>
+                                    <mat-icon>restaurant</mat-icon>
+                                    Meals
+                                </li>
+                                <li>
+                                    <mat-icon>flight</mat-icon>
+                                    Flight
+                                </li>
+                                <li>
+                                    <mat-icon>apartment</mat-icon>
+                                    Hotel
+                                </li>
+                                <li>
+                                    <mat-icon>hiking</mat-icon>
+                                    Activity
+                                </li>
+                                <li>
+                                    <mat-icon>directions_bus</mat-icon>
+                                    Transfar
+                                </li>
+                                <li>
+                                    <mat-icon>camera</mat-icon>
+                                    Sightseeing
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card box" matTooltip="Dubai Holiday 5N - Excelsior Hotel Downtown Special" [routerLink]="['/tour-details']">
+                        <div class="cardImageWrapper" dataLable="4:3">
+                            <div class="cardImage">
+                                <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3147/Dubai1.jpg?crop=370:240&downsize=370:240" alt="">
+                            </div>
+                            <div class="cardImageShadow"></div>
+                            <div class="cardDay">3N/4D</div>
+                        </div>
+                        <div class="cardFooter">
+                            <div class="cardPrice ">
+                                <span>$4,500</span> $3,564
+                                <div class="cardOffer mt-0">per person</div>
+                            </div>
+                            <ul class="cardAmenity">
+                                <li>
+                                    <mat-icon>flight</mat-icon>
+                                    Flight
+                                </li>
+                                <li>
+                                    <mat-icon>apartment</mat-icon>
+                                    Hotel
+                                </li>
+                                <li>
+                                    <mat-icon>hiking</mat-icon>
+                                    Activity
+                                </li>
+                                <li>
+                                    <mat-icon>directions_bus</mat-icon>
+                                    Transfar
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cardBody">
+                            <div class="cardHeading text-ellipsis">Dubai Holiday 5N - Excelsior Hotel Downtown Special</div>
+                            <div class="cardDes text-clamp ">Nature at its best! Thick luscious foliage, relaxed backwaters, blissful temples and synagogues, coral beaches and serene lakes</div>
+                            <div class="cardPrice ">$3,564
+                                <span>$4,500</span>
+                                <div class="cardOffer mt-0">per person</div>
+                            </div>
+                            <ul class="cardAmenity">
+                                <li>
+                                    <mat-icon>restaurant</mat-icon>
+                                    Meals
+                                </li>
+                                <li>
+                                    <mat-icon>flight</mat-icon>
+                                    Flight
+                                </li>
+                                <li>
+                                    <mat-icon>apartment</mat-icon>
+                                    Hotel
+                                </li>
+                                <li>
+                                    <mat-icon>hiking</mat-icon>
+                                    Activity
+                                </li>
+                                <li>
+                                    <mat-icon>directions_bus</mat-icon>
+                                    Transfar
+                                </li>
+                                <li>
+                                    <mat-icon>camera</mat-icon>
+                                    Sightseeing
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card box" matTooltip="Grandeur UAE - Group Tour" [routerLink]="['/tour-details']">
+                        <div class="cardImageWrapper" dataLable="4:3">
+                            <div class="cardImage">
+                                <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3147/Dubai4.jpg?crop=370:240&downsize=370:240" alt="">
+                            </div>
+                            <div class="cardImageShadow"></div>
+                            <div class="cardDay">3N/4D</div>
+                        </div>
+                        <div class="cardFooter">
+                            <div class="cardPrice ">
+                                <span>$4,500</span> $3,564
+                                <div class="cardOffer mt-0">per person</div>
+                            </div>
+                            <ul class="cardAmenity">
+                                <li>
+                                    <mat-icon>flight</mat-icon>
+                                    Flight
+                                </li>
+                                <li>
+                                    <mat-icon>apartment</mat-icon>
+                                    Hotel
+                                </li>
+                                <li>
+                                    <mat-icon>hiking</mat-icon>
+                                    Activity
+                                </li>
+                                <li>
+                                    <mat-icon>directions_bus</mat-icon>
+                                    Transfar
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cardBody">
+                            <div class="cardHeading text-ellipsis">Grandeur UAE - Group Tour</div>
+                            <div class="cardDes text-clamp ">Nature at its best! Thick luscious foliage, relaxed backwaters, blissful temples and synagogues, coral beaches and serene lakes</div>
+                            <div class="cardPrice ">$3,564
+                                <span>$4,500</span>
+                                <div class="cardOffer mt-0">per person</div>
+                            </div>
+                            <ul class="cardAmenity">
+                                <li>
+                                    <mat-icon>restaurant</mat-icon>
+                                    Meals
+                                </li>
+                                <li>
+                                    <mat-icon>flight</mat-icon>
+                                    Flight
+                                </li>
+                                <li>
+                                    <mat-icon>apartment</mat-icon>
+                                    Hotel
+                                </li>
+                                <li>
+                                    <mat-icon>hiking</mat-icon>
+                                    Activity
+                                </li>
+                                <li>
+                                    <mat-icon>directions_bus</mat-icon>
+                                    Transfar
+                                </li>
+                                <li>
+                                    <mat-icon>camera</mat-icon>
+                                    Sightseeing
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card box" matTooltip="Dubai Holiday 5N - Group Departure" [routerLink]="['/tour-details']">
+                        <div class="cardImageWrapper" dataLable="4:3">
+                            <div class="cardImage">
+                                <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3147/comic-con-festival.jpg?crop=370:240&downsize=370:240" alt="">
+                            </div>
+                            <div class="cardImageShadow"></div>
+                            <div class="cardDay">3N/4D</div>
+                        </div>
+                        <div class="cardFooter">
+                            <div class="cardPrice ">
+                                <span>$4,500</span> $3,564
+                                <div class="cardOffer mt-0">per person</div>
+                            </div>
+                            <ul class="cardAmenity">
+                                <li>
+                                    <mat-icon>flight</mat-icon>
+                                    Flight
+                                </li>
+                                <li>
+                                    <mat-icon>apartment</mat-icon>
+                                    Hotel
+                                </li>
+                                <li>
+                                    <mat-icon>hiking</mat-icon>
+                                    Activity
+                                </li>
+                                <li>
+                                    <mat-icon>directions_bus</mat-icon>
+                                    Transfar
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cardBody">
+                            <div class="cardHeading text-ellipsis">Dubai Holiday 5N - Group Departure</div>
+                            <div class="cardDes text-clamp ">Nature at its best! Thick luscious foliage, relaxed backwaters, blissful temples and synagogues, coral beaches and serene lakes</div>
+                            <div class="cardPrice ">$3,564
+                                <span>$4,500</span>
+                                <div class="cardOffer mt-0">per person</div>
+                            </div>
+                            <ul class="cardAmenity">
+                                <li>
+                                    <mat-icon>restaurant</mat-icon>
+                                    Meals
+                                </li>
+                                <li>
+                                    <mat-icon>flight</mat-icon>
+                                    Flight
+                                </li>
+                                <li>
+                                    <mat-icon>apartment</mat-icon>
+                                    Hotel
+                                </li>
+                                <li>
+                                    <mat-icon>hiking</mat-icon>
+                                    Activity
+                                </li>
+                                <li>
+                                    <mat-icon>directions_bus</mat-icon>
+                                    Transfar
+                                </li>
+                                <li>
+                                    <mat-icon>camera</mat-icon>
+                                    Sightseeing
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card box" matTooltip="JW Marriott Marquis Dubai Exclusive Holiday" [routerLink]="['/tour-details']">
+                        <div class="cardImageWrapper" dataLable="4:3">
+                            <div class="cardImage">
+                                <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3147/DubaiMarina.jpg?crop=370:240&downsize=370:240" alt="">
+                            </div>
+                            <div class="cardImageShadow"></div>
+                            <div class="cardDay">3N/4D</div>
+                        </div>
+                        <div class="cardFooter">
+                            <div class="cardPrice ">
+                                <span>$4,500</span> $3,564
+                                <div class="cardOffer mt-0">per person</div>
+                            </div>
+                            <ul class="cardAmenity">
+                                <li>
+                                    <mat-icon>flight</mat-icon>
+                                    Flight
+                                </li>
+                                <li>
+                                    <mat-icon>apartment</mat-icon>
+                                    Hotel
+                                </li>
+                                <li>
+                                    <mat-icon>hiking</mat-icon>
+                                    Activity
+                                </li>
+                                <li>
+                                    <mat-icon>directions_bus</mat-icon>
+                                    Transfar
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cardBody">
+                            <div class="cardHeading text-ellipsis">JW Marriott Marquis Dubai Exclusive Holiday</div>
+                            <div class="cardDes text-clamp ">Nature at its best! Thick luscious foliage, relaxed backwaters, blissful temples and synagogues, coral beaches and serene lakes</div>
+                            <div class="cardPrice ">$3,564
+                                <span>$4,500</span>
+                                <div class="cardOffer mt-0">per person</div>
+                            </div>
+                            <ul class="cardAmenity">
+                                <li>
+                                    <mat-icon>restaurant</mat-icon>
+                                    Meals
+                                </li>
+                                <li>
+                                    <mat-icon>flight</mat-icon>
+                                    Flight
+                                </li>
+                                <li>
+                                    <mat-icon>apartment</mat-icon>
+                                    Hotel
+                                </li>
+                                <li>
+                                    <mat-icon>hiking</mat-icon>
+                                    Activity
+                                </li>
+                                <li>
+                                    <mat-icon>directions_bus</mat-icon>
+                                    Transfar
+                                </li>
+                                <li>
+                                    <mat-icon>camera</mat-icon>
+                                    Sightseeing
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card box" matTooltip="Dubai Holiday 3N - Four Points by Sheraton Exclusive" [routerLink]="['/tour-details']">
+                        <div class="cardImageWrapper" dataLable="4:3">
+                            <div class="cardImage">
+                                <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3147/Cityscape of Dubai Marina district after the sunset.jpg?crop=370:240&downsize=370:240" alt="">
+                            </div>
+                            <div class="cardImageShadow"></div>
+                            <div class="cardDay">3N/4D</div>
+                        </div>
+                        <div class="cardFooter">
+                            <div class="cardPrice ">
+                                <span>$4,500</span> $3,564
+                                <div class="cardOffer mt-0">per person</div>
+                            </div>
+                            <ul class="cardAmenity">
+                                <li>
+                                    <mat-icon>flight</mat-icon>
+                                    Flight
+                                </li>
+                                <li>
+                                    <mat-icon>apartment</mat-icon>
+                                    Hotel
+                                </li>
+                                <li>
+                                    <mat-icon>hiking</mat-icon>
+                                    Activity
+                                </li>
+                                <li>
+                                    <mat-icon>directions_bus</mat-icon>
+                                    Transfar
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cardBody">
+                            <div class="cardHeading text-ellipsis">Dubai Holiday 3N - Four Points by Sheraton Exclusive</div>
+                            <div class="cardDes text-clamp ">Nature at its best! Thick luscious foliage, relaxed backwaters, blissful temples and synagogues, coral beaches and serene lakes</div>
+                            <div class="cardPrice ">$3,564
+                                <span>$4,500</span>
+                                <div class="cardOffer mt-0">per person</div>
+                            </div>
+                            <ul class="cardAmenity">
+                                <li>
+                                    <mat-icon>restaurant</mat-icon>
+                                    Meals
+                                </li>
+                                <li>
+                                    <mat-icon>flight</mat-icon>
+                                    Flight
+                                </li>
+                                <li>
+                                    <mat-icon>apartment</mat-icon>
+                                    Hotel
+                                </li>
+                                <li>
+                                    <mat-icon>hiking</mat-icon>
+                                    Activity
+                                </li>
+                                <li>
+                                    <mat-icon>directions_bus</mat-icon>
+                                    Transfar
+                                </li>
+                                <li>
+                                    <mat-icon>camera</mat-icon>
+                                    Sightseeing
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="card box" matTooltip="Dubai Summer Special Group Departure" [routerLink]="['/tour-details']">
+                        <div class="cardImageWrapper" dataLable="4:3">
+                            <div class="cardImage">
+                                <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3147/DubaiMarinaWithIluminatedFountain.jpg?crop=370:240&downsize=370:240" alt="">
+                            </div>
+                            <div class="cardImageShadow"></div>
+                            <div class="cardDay">3N/4D</div>
+                        </div>
+                        <div class="cardFooter">
+                            <div class="cardPrice ">
+                                <span>$4,500</span> $3,564
+                                <div class="cardOffer mt-0">per person</div>
+                            </div>
+                            <ul class="cardAmenity">
+                                <li>
+                                    <mat-icon>flight</mat-icon>
+                                    Flight
+                                </li>
+                                <li>
+                                    <mat-icon>apartment</mat-icon>
+                                    Hotel
+                                </li>
+                                <li>
+                                    <mat-icon>hiking</mat-icon>
+                                    Activity
+                                </li>
+                                <li>
+                                    <mat-icon>directions_bus</mat-icon>
+                                    Transfar
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cardBody">
+                            <div class="cardHeading text-ellipsis">Dubai Summer Special Group Departure</div>
+                            <div class="cardDes text-clamp ">Nature at its best! Thick luscious foliage, relaxed backwaters, blissful temples and synagogues, coral beaches and serene lakes</div>
+                            <div class="cardPrice ">$3,564
+                                <span>$4,500</span>
+                                <div class="cardOffer mt-0">per person</div>
+                            </div>
+                            <ul class="cardAmenity">
+                                <li>
+                                    <mat-icon>restaurant</mat-icon>
+                                    Meals
+                                </li>
+                                <li>
+                                    <mat-icon>flight</mat-icon>
+                                    Flight
+                                </li>
+                                <li>
+                                    <mat-icon>apartment</mat-icon>
+                                    Hotel
+                                </li>
+                                <li>
+                                    <mat-icon>hiking</mat-icon>
+                                    Activity
+                                </li>
+                                <li>
+                                    <mat-icon>directions_bus</mat-icon>
+                                    Transfar
+                                </li>
+                                <li>
+                                    <mat-icon>camera</mat-icon>
+                                    Sightseeing
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
+<app-info></app-info>
+<app-footer></app-footer>

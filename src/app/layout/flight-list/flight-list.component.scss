@@ -1,0 +1,42 @@
+@import 'src/variable.scss';
+ul.flightListing{list-style: none;padding: 0;margin: -0.9375rem 0;
+	&>li{width: 100%;padding: 0.9375rem 0;
+		.card{flex-direction: row;flex-wrap: wrap;align-items: center;
+			/* &Icon{width: 3.75rem;height: 3.75rem;} */
+			&Body{display: flex;flex-direction: column;}
+			&Footer{display: block;text-align: right;}
+		}
+		&:hover{
+			.card{
+				&Image{transform: scale(1.05, 1.05);}
+			}
+		}
+	}
+}
+.flight{
+	&Wrapper{display: flex;margin: 0;}
+	&Filter{width: 18.75rem;}
+	&List{/*width: calc(100% - 18.75rem);*/padding-inline-start: 1.875rem;width: 100%;}
+	&Details{border-block-start: 0.0625rem solid lighten($black,80%);order: 3;width: 100%;}
+	&Body{padding: 0.9375rem 0;}
+	&Ticket{border: 0.0625rem solid lighten($black,85%); border-radius: 0.5rem;}
+	&Separetor{padding: 0.5rem 0;margin: 0;position: relative;
+		&:before{   border-block-start: 0.0625rem dashed lighten($black,85%);content: "";margin: 0px auto;position: absolute;inset: 50% 0px 0px;width: 98%;z-index: -1;}
+		.sepa{
+			&Left,&Right{position: relative;
+				&:before,&:after{content: "";position: absolute;width: 0;height: 0;border-style: solid;border-color: transparent;top: -0.625rem;}
+			}
+
+			&Left{
+				&:before{border-left: 0.625rem solid lighten($black,85%);border-top: 0.625rem solid transparent;border-bottom: 0.625rem solid transparent;left: 0;}
+				&:after{border-width: 0.625rem 0.5rem 0.625rem 0.625rem;border-style: solid;border-color: transparent transparent transparent $white;left: -0.125rem;}
+			}
+			&Right{
+				&:before{border-right: 0.625rem solid lighten($black,85%);border-top: 0.625rem solid transparent;border-bottom: 0.625rem solid transparent;right: -0.0625rem;}
+				&:after{border-width: 0.625rem 0.625rem 0.625rem 0.5rem ;border-style: solid;border-color: transparent $white transparent transparent ;right: -0.1875rem;}
+			}
+			&Text{background-color:lighten(desaturate($primary,80%),45%); color: desaturate($primary,80%);position: absolute;border-radius: 1rem;padding: 0.25rem 0.75rem;top: 50%;left: 50%;font-size: 0.75rem;transform: translate(-50%,-50%);}
+		}
+	}
+	&Table{border: lighten(desaturate($primary,80%),25%) solid 0.0625rem;padding: 0.5rem;}
+}

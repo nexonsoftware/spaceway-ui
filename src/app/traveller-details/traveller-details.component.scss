@@ -1,0 +1,157 @@
+.traveller-details_main {
+    mat-card-title {
+        font-weight: 600;
+        font-size: 19px;
+        margin-bottom: 25px;
+        color: #000;
+    }
+    .mat-list {
+        background: #dff5ff;
+        padding: 0;
+        margin-bottom: 30px;
+        mat-list-item {
+            font-size: 14px;
+            mat-icon {
+                font-size: 17px;
+                height: auto;
+                color: #09bf1f;
+            }
+            button {
+                color: #1aabe3;
+                font-size: 16px;
+                &::hover {
+                    .mat-button-focus-overlay {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+    mat-card-subtitle {
+        display: flex;
+        mat-icon {
+            color: #62b8f5;
+            align-items: center;
+            vertical-align: middle;
+        }
+        span {
+            font-size: 15px;
+            font-weight: 600;
+            margin-left: 7px;
+            color: #000;
+        }
+    }
+     ::ng-deep .mat-expansion-panel-header {
+        padding: 0;
+        height: auto;
+    }
+    mat-panel-title {
+        font-weight: 600;
+        font-size: 17px;
+        color: #000;
+        width: 100%;
+         ::ng-deep mat-checkbox {
+            width: 100%;
+            padding: 19px;
+            label {
+                width: 100%;
+                vertical-align: middle;
+                align-items: center;
+                .mat-checkbox-inner-container {
+                    margin: unset;
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+    .mat-expansion-panel {
+        box-shadow: 0 0 6px #ddd;
+    }
+     ::ng-deep .mat-card-actions {
+        background: #fff;
+        box-shadow: 1px 0px 14px #ddd;
+        border-top: 1px solid #ddd;
+        margin-left: 0;
+        margin-right: 0;
+        button {
+            color: #0e78fb;
+            &:hover {
+                .mat-button-focus-overlay {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+     ::ng-deep .mat-expansion-panel-body {
+        .alert-warning {
+            padding: 0.75rem 1.25rem;
+            margin-bottom: 1rem;
+            border: 1px solid transparent;
+            border-radius: 0.25rem;
+            color: #856404;
+            background-color: #fff3cd;
+            border-color: #ffeeba;
+        }
+        .mat-form-field {
+            width: 100%;
+            margin-right: 15px;
+            .mat-form-field-infix {
+                padding: 15px 10px;
+                border-top-width: 0;
+            }
+            .mat-form-field-underline:before {
+                border-radius: 0;
+            }
+        }
+         ::ng-deep .mat-radio-group {
+            mat-radio-button {
+                .mat-radio-label {
+                    padding: 12px 30px;
+                    border: 1px solid #b1b1b1;
+                    .mat-radio-container {
+                        display: none;
+                    }
+                    .mat-radio-label-content {
+                        padding: 0;
+                    }
+                }
+                &:first-child {
+                    .mat-radio-label {
+                        border-right: 0;
+                    }
+                }
+                &.mat-radio-checked {
+                    .mat-radio-label {
+                        background: #2f98e1;
+                        border-color: #2f98e1;
+                        border-bottom: 2px solid #0a436a;
+                        color: #f8fffc;
+                    }
+                }
+            }
+        }
+        mat-divider {
+            position: relative;
+        }
+        .mat-form-field-flex {
+            align-items: center;
+        }
+    }
+    .booking_details_send {
+        padding: 12px;
+        mat-card-subtitle {
+            span {
+                margin-left: 0;
+            }
+        }
+         ::ng-deep .mat-form-field {
+            width: 100%;
+            .mat-form-field-flex {
+                padding: 14px 10px 0;
+            }
+            .mat-form-field-underline:before {
+                border-radius: 0;
+            }
+        }
+    }
+}

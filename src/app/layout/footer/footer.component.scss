@@ -1,0 +1,10 @@
+@import '../../../variable.scss';
+footer{background-color: $black;padding: 1.875rem 0;position: relative;z-index: 12;	
+	p{color: darken($white,50%);font-size: 0.8125rem;}
+}
+.footerLink{display: flex;align-items: center;justify-content: flex-end;
+	a{font-size: 0.8125rem;color: darken($white,50%);
+		& + a{margin-inline-start: 1.25rem;}
+		&:hover{color: darken($white,15%)}
+	}
+} 

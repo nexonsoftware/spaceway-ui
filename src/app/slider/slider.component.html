@@ -1,0 +1,14 @@
+ <div>Some tags before</div>
+  <owl-carousel-o [options]="customOptionss">
+    <ng-template carouselSlide>Slide 1</ng-template>  
+    <ng-template carouselSlide>Slide 2</ng-template>  
+    <ng-template carouselSlide>Slide 3</ng-template>  
+    <ng-template carouselSlide>Slide 4</ng-template>  
+    <ng-template carouselSlide>Slide 5</ng-template>  
+    <ng-template carouselSlide>Slide 6</ng-template>  
+  </owl-carousel-o>
+  <div>Some tags after</div>
+
+  <ng-select [multiple]="true" [(ngModel)]="selectedCars" [closeOnSelect]="false" [hideSelected]="true"  appendTo="" placeholder="Select Manager">
+            <ng-option *ngFor="let car of cars" [value]="car.id" [disabled]="car.disabled">{{car.name}}</ng-option>
+          </ng-select>

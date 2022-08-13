@@ -1,0 +1,6 @@
+@import '../../../variable.scss';
+.search{
+	&Box{width: 100%; max-width: 52.5rem; min-height: 21.875rem;background-color: $white;border-radius:1.25rem;backdrop-filter: blur(0.3125rem);box-shadow: lighten( $black, 40% ) 0 0 2.5rem ;}
+	&Title{font-size: 2rem;color: $secondary;font-weight: 600;}
+	&Des{font-size: 1.25rem; color: desaturate($primary,80%);}
+}

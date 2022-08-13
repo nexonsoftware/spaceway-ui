@@ -1,0 +1,48 @@
+<app-header></app-header>
+<div class="main">
+    <section class="subBanner">
+        <div class="imgSection">
+            <img src="assets/images/banner1.jpg" alt="banner">
+        </div>
+        <div class="container-xl">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h2 class="banner-heading fontLobster">Contact Us</h2>
+                    <!-- <h6 class="banner-text">Life is a journey,But life is short, and the world is wide</h6> -->
+                </div>
+                <div class="col-auto">
+                    <mat-form-field appearance="outline" color="white" class="rounded">
+                        <mat-icon matPrefix>search</mat-icon>
+                        <input matInput placeholder="Search here...">
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="module pt-0">
+        <div class="container-xl">
+            <div aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item" [routerLink]="['/']">Home</li>
+                    <!-- <li class="breadcrumb-item" [routerLink]="['/tour']">About s</li> -->
+                    <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <section class="module">
+        <div class="container-xl">
+            <!-- <h2 class="text-center heading">Unlock Special Deals</h2> -->
+            <p>We are open 24/7 to support you with your bookings or any questions you may have. You can contact us by:</p>
+
+            <h4 class="heading pt-3">Call us:</h4>
+            <h5 class="heading pb-5">04-2341022</h5>
+
+            <h4 class="heading pt-3">WhatsApp:</h4>
+            <h5 class="heading pb-5">+971 585395101</h5>
+
+            <h4 class="heading pt-3">Email us:</h4>
+            <h5 class="heading pb-5">support@spacewaytravel.ae</h5>
+        </div>
+    </section>
+    <app-footer></app-footer>

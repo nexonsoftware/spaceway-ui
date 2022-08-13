@@ -1,0 +1,32 @@
+@import '../../variable.scss';
+.user{
+	&Menu{background-color: $white;padding: 0.625rem;border-radius: 0.625rem;box-shadow: rgba($black,0.1) 0 0 1.25rem ; }
+	&Box{background-color: $white;padding: 0.9375rem 1.25rem;display: flex;align-items: center;border-block-end: darken($white,10%)  solid 0.0625rem ;margin-block-end: 0.625rem;}
+	&-image{width: 3.125rem;height: 3.125rem;border-radius: 50%;background-color: $primary;display: flex;align-items: center;justify-content: center;color: $white;font-weight: 600;
+		span{width: 100%;height: 100%;left: 0;top: 0;display: flex;align-items: center;justify-content: center;text-transform: uppercase;font-size: 1rem;}
+	}
+	&-details{margin-inline-start: 0.9375rem;}
+	&-name{font-weight: 600;}
+	&-email{font-weight: 300;color: darken($white,40%) ;font-size: 0.75rem;}
+	&Nav{list-style: none;padding: 0;margin: 0;position: relative;
+		li{padding: 0.9375rem;display: flex;align-items: center;cursor: pointer;
+			& + li{border-block-start: darken($white,10%) solid 0.0625rem;}
+			&:hover{background-color:lighten( desaturate($primary,80%),50%) ;}
+			.mat-icon{color:lighten( desaturate($primary,80%),25%); margin-inline-end: 0.9375rem;}
+			&.active{color: $primary;font-weight: 500;background-color: lighten($primary,50%);position: relative;
+				.mat-icon{color: $primary;}
+				&:after{content: '\e5cc';    font-family: 'Material Icons',sans-serif;font-style: 1.25rem;position: absolute;right: 0.5rem;}
+			}
+		}
+	}
+}
+
+@media screen and (max-width:700px){
+	.user{
+		&-box{margin-block-start: 3.75rem;background-color: #d1232a;color: #fff;padding: 0.625rem 1.25rem;}
+		&-image{display: none}
+		&-details{margin-inline-start: 0;}
+		&-email{color: #fff;}
+		&-menu{margin-block-start: 0}
+	}
+}

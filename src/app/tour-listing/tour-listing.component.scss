@@ -1,0 +1,12 @@
+ul.tourListing{list-style: none;padding: 0;margin: -0.9375rem;display: flex;flex-wrap: wrap;
+	&>li{width: 25%;padding: 0.9375rem;
+		&:hover{
+			.card{cursor: pointer;
+				&Image{transform: scale(1.05, 1.05);}
+			}
+		}
+	}
+	&.listView{margin: -0.9375rem 0 ;flex-direction: column;
+		&>li{width: 100%; padding: 0.9375rem 0;}
+	}
+}

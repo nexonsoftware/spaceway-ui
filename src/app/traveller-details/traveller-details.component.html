@@ -1,0 +1,219 @@
+<app-header></app-header>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-12 mt-3 mb-3">
+                <form [formGroup]="options">
+                <mat-card class="traveller-details_main">
+                    <mat-card-title>Traveller Details</mat-card-title>
+                    <mat-list role="list">
+                        <mat-list-item role="listitem">
+                            <mat-icon>lock</mat-icon> Log in to view your <b>saved traveller list, unlock amazing deals</b> & much more! <button mat-button class="ml-auto" align="end">LOGIN NOW</button></mat-list-item>
+                    </mat-list>
+                    <mat-card-subtitle>
+                        <mat-icon>supervised_user_circle</mat-icon> <span>ADULT (12 yrs+)</span>
+                        <div class=" ml-auto"><span>1/2</span> added</div>
+                    </mat-card-subtitle>
+                    <!--add new-->
+                    <mat-accordion class="example-headers-align" multi hideToggle>
+                        <mat-expansion-panel [expanded]="true">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <mat-checkbox class="example-margin"> ADULT 1</mat-checkbox>
+                                </mat-panel-title>
+
+                            </mat-expansion-panel-header>
+                            <div class="alert alert-warning">
+                                Enter name as mentioned on your passport or Government approved IDs.
+                            </div>
+                            
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <mat-form-field appearance="fill">
+                                            <input matInput formControlName="adult_first_name" placeholder="First & Middle Name">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <mat-form-field appearance="fill">
+                                            <input matInput formControlName="adult_last_name" placeholder="Last Name">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <mat-radio-group aria-label="Select an option" formControlName="adult_gender">
+                                            <mat-radio-button value="1">MALE</mat-radio-button>
+                                            <mat-radio-button value="2">FEMALE</mat-radio-button>
+                                        </mat-radio-group>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <mat-label>Date of Birth</mat-label>
+                                        <mat-form-field appearance="fill" class="mt-2">
+
+                                            <input matInput [matDatepicker]="picker1" placeholder="YY/MM/DD" formControlName="adult_dob">
+                                            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                            <mat-datepicker #picker1></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                        </mat-expansion-panel>
+
+                    </mat-accordion>
+                    <mat-card-actions>
+                        <button mat-button>+ ADD NEW ADULT</button>
+                    </mat-card-actions>
+                    <!--end add new-->
+
+                    <mat-card-subtitle class="mt-5">
+                        <mat-icon>supervised_user_circle</mat-icon> <span>CHILD (2-12 Yrs)</span>
+                        <div class=" ml-auto"><span>1/2</span> added</div>
+                    </mat-card-subtitle>
+                    <!--add new-->
+                    <mat-accordion class="example-headers-align" multi hideToggle>
+                        <mat-expansion-panel [expanded]="true">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <mat-checkbox class="example-margin"> CHILD 1</mat-checkbox>
+                                </mat-panel-title>
+
+                            </mat-expansion-panel-header>
+                            <div class="alert alert-warning">
+                                Enter name as mentioned on your passport or Government approved IDs.
+                            </div>
+                            
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <mat-form-field appearance="fill">
+                                            <input matInput formControlName="child_first_name" placeholder="First & Middle Name">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <mat-form-field appearance="fill">
+                                            <input matInput placeholder="Last Name" formControlName="child_last_name">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <mat-radio-group aria-label="Select an option" formControlName="child_gender">
+                                            <mat-radio-button value="1">MALE</mat-radio-button>
+                                            <mat-radio-button value="2">FEMALE</mat-radio-button>
+                                        </mat-radio-group>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <mat-label>Date of Birth</mat-label>
+                                        <mat-form-field appearance="fill" class="mt-2">
+                                            <input matInput [matDatepicker]="picker2" placeholder="YY/MM/DD" formControlName="child_dob">
+                                            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                                            <mat-datepicker #picker2></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            
+                        </mat-expansion-panel>
+
+                    </mat-accordion>
+                    <mat-card-actions>
+                        <button mat-button>+ ADD NEW CHILD</button>
+                    </mat-card-actions>
+                    <!--end add new-->
+
+                    <mat-card-subtitle class="mt-5">
+                        <mat-icon>supervised_user_circle</mat-icon> <span>Infant (< 2 Yrs)</span>
+                        <div class=" ml-auto"><span>1/2</span> added</div>
+                    </mat-card-subtitle>
+                    <!--add new-->
+                    <mat-accordion class="example-headers-align" multi hideToggle>
+                        <mat-expansion-panel [expanded]="true">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <mat-checkbox class="example-margin"> Infant 1</mat-checkbox>
+                                </mat-panel-title>
+
+                            </mat-expansion-panel-header>
+                            <div class="alert alert-warning">
+                                Enter name as mentioned on your passport or Government approved IDs.
+                            </div>
+                            
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <mat-form-field appearance="fill">
+                                            <input matInput placeholder="First & Middle Name" formControlName="infant_first_name">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <mat-form-field appearance="fill">
+                                            <input matInput placeholder="Last Name" formControlName="infant_last_name">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <mat-radio-group aria-label="Select an option" formControlName="infant_gender">
+                                            <mat-radio-button value="1">MALE</mat-radio-button>
+                                            <mat-radio-button value="2">FEMALE</mat-radio-button>
+                                        </mat-radio-group>
+                                    </div>
+                                    <div class="col-md-4"><mat-label>Date of Birth</mat-label>
+                                        <mat-form-field appearance="fill" class="mt-2">
+                                            <input matInput [matDatepicker]="picker3" placeholder="YY/MM/DD" formControlName="infant_dob">
+                                            <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                                            <mat-datepicker #picker3></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            
+                            
+                        </mat-expansion-panel>
+
+                    </mat-accordion>
+                    <mat-card-actions>
+                        <button mat-button>+ ADD NEW ADULT</button>
+                    </mat-card-actions>
+                    <!--end add new-->
+
+                    <mat-divider></mat-divider>
+                    <div class="booking_details_send">
+                        <mat-card-subtitle class="mt-4"><span>Booking details will be sent to</span>
+                        </mat-card-subtitle>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <mat-form-field appearance="fill">
+                                        <mat-label>Mobile No</mat-label>
+                                        <input matInput placeholder="Mobile No" formControlName="cust_phone">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                        <mat-form-field appearance="fill">
+                                            <mat-label>Email</mat-label>
+                                            <input matInput placeholder="Email" formControlName="cust_email">
+                                        </mat-form-field>
+                                </div>
+                            </div>
+
+                            <!-- <mat-form-field appearance="fill">
+                                <mat-label>Country Code</mat-label>
+                                <input matInput placeholder="First & Middle Name" formControlName="cust_counrty_code">
+                            </mat-form-field> -->
+
+                            
+
+                            
+                            <!-- <mat-form-field class="example-full-width" appearance="fill">
+                                <mat-label>Choose a BirthDate</mat-label>
+                                <input matInput [matDatepicker]="picker" formControlName="cust_dob">
+                                <mat-hint>MM/DD/YYYY</mat-hint>
+                                <mat-datepicker-toggle matSuffix [for]="picker">
+                                  <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                                </mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+                            <mat-form-field appearance="fill">
+                                <mat-label>Card No</mat-label>
+                                <input type="number" matInput placeholder="Email" formControlName="cust_card_no">
+                            </mat-form-field> -->
+                        
+                    </div>
+                </mat-card>
+            </form>
+                <button mat-button class="mat-focus-indicator btn-lg mat-flat-button mat-button-base mat-primary mt-3 mb-3"> CONTINUE</button>
+            </div>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

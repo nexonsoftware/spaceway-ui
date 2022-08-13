@@ -1,0 +1,89 @@
+<div class="searchBox">
+    <mat-tab-group>
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon>flight</mat-icon>
+                <span class="mat-text">Flight</span>
+            </ng-template>
+            <div class="searchTitle">Looking to save on your flight?</div>
+            <div class="searchDes">We compare thousands of deals to get you there</div>
+            <mat-divider></mat-divider>
+            <app-flight-search></app-flight-search>
+        </mat-tab>
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon>business</mat-icon>
+                <span class="mat-text">Hotels</span>
+            </ng-template>
+            <div class="searchTitle">Need a hotel or private rental?</div>
+            <div class="searchDes">Book a room with free cancellation for more flexibility</div>
+            <mat-divider></mat-divider>
+            <app-hotel-search></app-hotel-search>
+        </mat-tab>
+        <!-- <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon>confirmation_number</mat-icon>
+        <span class="mat-text">Tour Details</span>
+
+      </ng-template>
+
+      <ul class="searchElement">
+        <li class="w-100">
+          <mat-form-field appearance="fill">
+            <mat-label>Where</mat-label>
+            <mat-icon matPrefix class="material-icons-outlined">search</mat-icon>
+            <input matInput  placeholder="e.g. - Area, Landmark or Property Name">
+          </mat-form-field>
+        </li>
+        <li>
+          <mat-form-field appearance="fill">
+            <mat-label>Departure - Return</mat-label>
+            <mat-date-range-input [rangePicker]="date">
+              <input matStartDate placeholder="M/DD/YYYY">
+              <input matEndDate placeholder="M/DD/YYYY">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matPrefix [for]="date">
+              <mat-icon matDatepickerToggleIcon>calendar_month</mat-icon>
+            </mat-datepicker-toggle>
+            <mat-date-range-picker #date></mat-date-range-picker>
+          </mat-form-field>
+        </li>
+        <li>
+          <mat-form-field appearance="fill">
+            <mat-label>Guests & Rooms</mat-label>
+            <mat-icon matPrefix class="material-icons-outlined" >people</mat-icon>
+            <input matInput (click)="travellerDialog()"  [formControl]="travellersFormControl" required="">
+            <mat-error  align="end" *ngIf="travellersFormControl.hasError('required')">
+              First Name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field >
+        </li>
+        <li>
+          <button mat-flat-button color="primary" class="btn-block lg-btn">Search</button>
+        </li>
+      </ul>
+    </mat-tab> -->
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon>recent_actors</mat-icon>
+                <!-- <a href="https://gocozmo.com/Visa.aspx" target="_blank" class="mat-text">Visa</a> -->
+                <a href="javascript:void(0)" class="mat-text">Visa</a>
+            </ng-template>
+            <div class="searchTitle">Looking to save on your Visa?</div>
+            <div class="searchDes">We compare thousands of deals to get you there</div>
+            <mat-divider></mat-divider>
+            <app-visa></app-visa>
+        </mat-tab>
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon>receipt_long</mat-icon>
+                <span class="mat-text">Insurance</span>
+            </ng-template>
+            <div class="searchTitle">Looking to save on your Insurance?</div>
+            <div class="searchDes">We compare thousands of deals to get you there.</div>
+            <mat-divider></mat-divider>
+            <app-insurance></app-insurance>
+           
+        </mat-tab>
+    </mat-tab-group>
+</div>

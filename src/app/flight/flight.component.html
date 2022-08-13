@@ -1,0 +1,372 @@
+<app-header></app-header>
+<div class="main">
+    <section class="subBanner">
+        <div class="imgSection">
+            <img src="assets/images/sub-banner.jpg" alt="banner">
+        </div>
+        <div class="container-xl">
+            <h2 class="banner-heading fontLobster">Looking to save on your flight?</h2>
+            <h6 class="banner-text">We compare thousands of deals to get you there</h6>
+        </div>
+    </section>
+    <section class="module pt-0" bgColor="gray">
+        <div class="container-xl">
+            <div aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item" [routerLink]="['/']">Home</li>
+                    <li class="breadcrumb-item active">Flight</li>
+                </ol>
+            </div>
+            <div class="box">
+                <div class="boxBody p-5">
+                    <h3 class="heading">Domestic and International Flights</h3>
+                    <mat-divider></mat-divider>
+                    <app-flight-search></app-flight-search>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="module" bgColor="gray">
+        <div class="container-xl">
+            <div class="box">
+                <div class="boxHeading">Exclusive Flight Booking Deals</div>
+                <div class="boxBody">
+                    <owl-carousel-o [options]="offerSlider">
+                        <ng-template carouselSlide>
+                            <div class="dobble listView">
+                                <div class="card box" matTooltip="Dubai Holiday 3N - Super Saver">
+                                    <div class="cardImageWrapper" dataLable="4:3">
+                                        <div class="cardImage">
+                                            <img src="https://gos3.ibcdn.com/axis-df-offer-1547802808.jpg" alt="">
+                                        </div>
+                                        <div class="cardImageShadow"></div>
+                                        <div class="cardDay">00d:14h:36m</div>
+                                    </div>
+                                    <div class="cardBody py-0">
+                                        <div class="cardHeading text-clamp">Up to Rs. 1500 OFF* on Domestic Flights!</div>
+                                        <div class="cardName font-weight-bold">Code: MMTWEDCREDIT</div>
+                                        <div class="cardOffer text-clamp">Valid on Axis Bank Credit & Debit Cards</div>
+                                    </div>
+                                </div>
+                                <div class="card box" matTooltip="Family Special Dubai Shopping Holiday">
+                                    <div class="cardImageWrapper" dataLable="4:3">
+                                        <div class="cardImage">
+                                            <img src="https://www.easemytrip.com/images/offer-img/flybig-airlines-sm.png" alt="">
+                                        </div>
+                                        <div class="cardImageShadow"></div>
+                                    </div>
+                                    <div class="cardBody py-0">
+                                        <div class="cardHeading text-clamp">JUST ANNOUNCED: flybig Introduces New Flights</div>
+                                        <div class="cardOffer text-clamp">from/to Kurnool, Bhopal and Lilabari! </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="dobble listView">
+                                <div class="card box" matTooltip="Dubai Holiday 3N - Super Saver">
+                                    <div class="cardImageWrapper" dataLable="4:3">
+                                        <div class="cardImage">
+                                            <img src="https://askbanking.com/creditcards/wp-content/uploads/2020/06/HSBC-GOIBIBO-Offers.png" alt="">
+                                        </div>
+                                        <div class="cardImageShadow"></div>
+                                        <div class="cardDay">00d:14h:36m</div>
+                                    </div>
+                                    <div class="cardBody py-0">
+                                        <div class="cardHeading text-clamp">Earn 5X Reward Points up to Rs. 10,000</div>
+                                        <div class="cardName font-weight-bold">Code: GOHSBC</div>
+                                        <div class="cardOffer text-clamp">on select HSBC Credit Cards*. Valid on domestic & international flight bookings.</div>
+                                    </div>
+                                </div>
+                                <div class="card box" matTooltip="Family Special Dubai Shopping Holiday">
+                                    <div class="cardImageWrapper" dataLable="4:3">
+                                        <div class="cardImage">
+                                            <img src="https://www.bigbreaks.com/Content/Images/offers/Flights/Indigo-Sale.jpg" alt="">
+                                        </div>
+                                        <div class="cardImageShadow"></div>
+                                    </div>
+                                    <div class="cardBody py-0">
+                                        <div class="cardHeading text-clamp">Good News: IndiGo Introduces Direct Flights</div>
+                                        <div class="cardOffer text-clamp">IndiGo Flight Offers, IndiGo Offers, Special Offers</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="dobble listView">
+                                <div class="card box" matTooltip="Dubai Holiday 3N - Super Saver">
+                                    <div class="cardImageWrapper" dataLable="4:3">
+                                        <div class="cardImage">
+                                            <img src="https://offercdn.paytm.com/blog/2022/01/flyhdfc-tnc-mob-1.png" alt="">
+                                        </div>
+                                        <div class="cardImageShadow"></div>
+                                        <div class="cardDay">Jun 29, 2022</div>
+                                    </div>
+                                    <div class="cardBody py-0">
+                                        <div class="cardHeading text-clamp">HDFC Dabit & Cradit Card Up to Rs. 2,000 OFF </div>
+                                        <div class="cardName font-weight-bold">Code: YATHDFC</div>
+                                        <div class="cardOffer text-clamp">We Have great deals for you. Valid on international flight bookings.</div>
+                                    </div>
+                                </div>
+                                <div class="card box" matTooltip="Family Special Dubai Shopping Holiday">
+                                    <div class="cardImageWrapper" dataLable="4:3">
+                                        <div class="cardImage">
+                                            <img src="https://images.smartpricedeal.com/cache/catalog/deals/2016/November/-16.11.16/international-flights-makemytrip-offer-500x500.jpg" alt="">
+                                        </div>
+                                        <div class="cardDay">29d:14h:36m</div>
+                                        <div class="cardImageShadow"></div>
+                                    </div>
+                                    <div class="cardBody py-0">
+                                        <div class="cardHeading text-clamp">Get Up to Rs. 5000 OFF* on International Flights!</div>
+                                        <div class="cardName font-weight-bold">Code: GOHSBC</div>
+                                        <div class="cardOffer text-clamp">Grab now and save big.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="dobble listView">
+                                <div class="card box" matTooltip="Dubai Holiday 3N - Super Saver">
+                                    <div class="cardImageWrapper" dataLable="4:3">
+                                        <div class="cardImage">
+                                            <img src="https://www.cardexpert.in/wp-content/uploads/2020/07/American-Express-Platinum-Charge-Card-Review.jpg" alt="">
+                                        </div>
+                                        <div class="cardImageShadow"></div>
+                                        <div class="cardDay">Jun 29, 2022</div>
+                                    </div>
+                                    <div class="cardBody py-0">
+                                        <div class="cardHeading text-clamp">American Express Cards. Flat 12% OFF (max. Rs.2,000) on domestic flights</div>
+                                        <div class="cardName font-weight-bold">Code: YATHDFC</div>
+                                        <div class="cardOffer text-clamp">on select HSBC Credit Cards*. Valid on domestic & international flight bookings.</div>
+                                    </div>
+                                </div>
+                                <div class="card box" matTooltip="Family Special Dubai Shopping Holiday">
+                                    <div class="cardImageWrapper" dataLable="4:3">
+                                        <div class="cardImage">
+                                            <img src="https://gos3.ibcdn.com/top-1553763891.jpg" alt="">
+                                        </div>
+                                        <div class="cardDay">29d:14h:36m</div>
+                                        <div class="cardImageShadow"></div>
+                                    </div>
+                                    <div class="cardBody py-0">
+                                        <div class="cardHeading text-clamp">Get Up to Rs. 5000 OFF* on International Flights!</div>
+                                        <div class="cardOffer text-clamp">Avail 3/6 Month No Cost EMI* + Up to 25% OFF* on Flights, </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="dobble listView">
+                                <div class="card box" matTooltip="Dubai Holiday 3N - Super Saver">
+                                    <div class="cardImageWrapper" dataLable="4:3">
+                                        <div class="cardImage">
+                                            <img src="https://www.bigbreaks.com/Content/Images/offers/Flights/bigbreaks-banners_360_243_bbsbi15.jpg" alt="">
+                                        </div>
+                                        <div class="cardImageShadow"></div>
+                                        <div class="cardDay">Jun 2, 2022</div>
+                                    </div>
+                                    <div class="cardBody py-0">
+                                        <div class="cardHeading text-clamp">Grab FLAT 10% OFF* on Domestic Flights</div>
+                                        <div class="cardName font-weight-bold">Code: DFSBI</div>
+                                        <div class="cardOffer text-clamp">with SBI Credit Card & fly away to a soothing destination for a break. </div>
+                                    </div>
+                                </div>
+                                <div class="card box" matTooltip="Family Special Dubai Shopping Holiday">
+                                    <div class="cardImageWrapper" dataLable="4:3">
+                                        <div class="cardImage">
+                                            <img src="https://pbs.twimg.com/media/EP05l2gU0AEprN6.jpg" alt="">
+                                        </div>
+                                        <div class="cardImageShadow"></div>
+                                    </div>
+                                    <div class="cardBody py-0">
+                                        <div class="cardHeading text-clamp">Grab NOW: Up to Rs. 1700 OFF* on Domestic Flights!</div>
+                                        <div class="cardName font-weight-bold">Code: FLYMON</div>
+                                        <div class="cardOffer text-clamp">Valid on ICICI Bank Credit Cards, Credit Cards EMI & Debit Cards</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </owl-carousel-o>
+                    <div class="clear20"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="module offerSlider" bgColor="gray">
+        <div class="container-xl">
+            <owl-carousel-o [options]="offerOneSlider">
+                <ng-template carouselSlide>
+                    <div class="card">
+                        <div class="cardImageWrapper" dataLable="10:2">
+                            <div class="cardImage">
+                                <img src="assets/images/slide.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="card">
+                        <div class="cardImageWrapper" dataLable="10:2">
+                            <div class="cardImage">
+                                <img src="assets/images/slide1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="card">
+                        <div class="cardImageWrapper" dataLable="10:2">
+                            <div class="cardImage">
+                                <img src="assets/images/slide2.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="card">
+                        <div class="cardImageWrapper" dataLable="10:2">
+                            <div class="cardImage">
+                                <img src="assets/images/slide3.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="card">
+                        <div class="cardImageWrapper" dataLable="10:2">
+                            <div class="cardImage">
+                                <img src="assets/images/slide4.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="card">
+                        <div class="cardImageWrapper" dataLable="10:2">
+                            <div class="cardImage">
+                                <img src="assets/images/slide5.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </owl-carousel-o>
+        </div>
+    </section>
+    <section class="module" bgColor="gray">
+        <div class="container-xl">
+            <div class="box">
+                <div class="boxHeading">International Destinations Now Open</div>
+                <div class="boxBody">
+                    <owl-carousel-o [options]="internationalSlider">
+                        <ng-template carouselSlide>
+                            <div class="card">
+                                <div class="cardImageWrapper" dataLable="4:5">
+                                    <div class="cardImage">
+                                        <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/1993/Grand%20Park.JPG?crop=192:285&downsize=192:285" alt="">
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="cardName">Maldives</div>
+                                    <div class="cardOffer">Starting at <strong>$2,200</strong> Per person</div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="card">
+                                <div class="cardImageWrapper" dataLable="4:5">
+                                    <div class="cardImage">
+                                        <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3067/I.jpg?crop=192:285&downsize=192:285" alt="">
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="cardName">Thailand</div>
+                                    <div class="cardOffer">Starting at <strong>$2,200</strong> Per person</div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="card">
+                                <div class="cardImageWrapper" dataLable="4:5">
+                                    <div class="cardImage">
+                                        <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3198/shutterstock_176887880.jpg?crop=192:285&downsize=192:285" alt="">
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="cardName">Europe</div>
+                                    <div class="cardOffer">Starting at <strong>$2,200</strong> Per person</div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="card">
+                                <div class="cardImageWrapper" dataLable="4:5">
+                                    <div class="cardImage">
+                                        <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/2514/singapore1.jpg?crop=192:285&downsize=192:285" alt="">
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="cardName">Singapore</div>
+                                    <div class="cardOffer">Starting at <strong>$2,200</strong> Per person</div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="card">
+                                <div class="cardImageWrapper" dataLable="4:5">
+                                    <div class="cardImage">
+                                        <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/4916/kuta.jpg?crop=192:285&downsize=192:285" alt="">
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="cardName">Bali</div>
+                                    <div class="cardOffer">Starting at <strong>$2,200</strong> Per person</div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="card">
+                                <div class="cardImageWrapper" dataLable="4:5">
+                                    <div class="cardImage">
+                                        <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/2004/RBA_Beach01.jpg?crop=192:285&downsize=192:285" alt="">
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="cardName">Mauritius</div>
+                                    <div class="cardOffer">Starting at <strong>$2,200</strong> Per person</div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="card">
+                                <div class="cardImageWrapper" dataLable="4:5">
+                                    <div class="cardImage">
+                                        <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3147/majestic-mauritus-and-dubai.jpg?crop=192:285&downsize=192:285" alt="">
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="cardName">Dubai</div>
+                                    <div class="cardOffer">Starting at <strong>$2,200</strong> Per person</div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="card">
+                                <div class="cardImageWrapper" dataLable="4:5">
+                                    <div class="cardImage">
+                                        <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3127/Golden-Horn,-Istanbul,-Turkey.jpg?crop=192:285&downsize=192:285" alt="">
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="cardName">Turkey</div>
+                                    <div class="cardOffer">Starting at <strong>$2,200</strong> Per person</div>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </owl-carousel-o>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<app-info></app-info>
+<app-footer></app-footer>

@@ -1,0 +1,440 @@
+<app-header></app-header>
+<div class="main">
+    <section class="subBanner">
+        <div class="imgSection">
+            <img src="assets/images/banner1.jpg" alt="banner">
+        </div>
+        <div class="container-xl">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h2 class="banner-heading fontLobster">Best Tours Package</h2>
+                    <h6 class="banner-text">Life is a journey,But life is short, and the world is wide</h6>
+                </div>
+                <div class="col-auto">
+                    <mat-form-field appearance="outline" color="white" class="rounded">
+                        <mat-icon matPrefix>search</mat-icon>
+                        <input matInput placeholder="Search here...">
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="module pt-0">
+        <div class="container-xl">
+            <div aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item" [routerLink]="['/']">Home</li>
+                    <li class="breadcrumb-item" [routerLink]="['/tour']">Tour</li>
+                    <li class="breadcrumb-item active" aria-current="page">Tour Listing</li>
+                </ol>
+            </div>
+            <div class="box">
+                <div class="boxHeading">Best-selling Holiday Destinations</div>
+                <div class="boxBody">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <h5 class="heading text-gray">Grab amazing discounts on customizable packages across top destinations!</h5>
+                            <p class="mb-3">Limited Period Offer!</p>
+                            <button mat-flat-button color="accent" class="btn-sm ml-auto" [routerLink]="['/tour-listing']">View All</button>
+                        </div>
+                        <div class="col-lg-8">
+                            <owl-carousel-o [options]="holidaySlider">
+                                <ng-template carouselSlide>
+                                    <div class="card">
+                                        <div class="cardImageWrapper" dataLable="4:5">
+                                            <div class="cardImage">
+                                                <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3198/london_shutterstock_30736720.jpg?crop=192:285&downsize=192:285" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="cardContainer">
+                                            <div class="cardName">United Kingdom</div>
+                                            <div class="cardOffer">Starting at <strong>$2,200</strong> Per person</div>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                                <ng-template carouselSlide>
+                                    <div class="card">
+                                        <div class="cardImageWrapper" dataLable="4:5">
+                                            <div class="cardImage">
+                                                <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/6484/swiss-skii.jpg?crop=192:285&downsize=192:285" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="cardContainer">
+                                            <div class="cardName">Switzerland</div>
+                                            <div class="cardOffer">Starting at <strong>$2,200</strong> Per person</div>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                                <ng-template carouselSlide>
+                                    <div class="card">
+                                        <div class="cardImageWrapper" dataLable="4:5">
+                                            <div class="cardImage">
+                                                <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3852/beach%20on%20Mahe%20island%20Seychelles.jpg?crop=192:285&downsize=192:285" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="cardContainer">
+                                            <div class="cardName">Seychelles</div>
+                                            <div class="cardOffer">Starting at <strong>$2,200</strong> Per person</div>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                                <ng-template carouselSlide>
+                                    <div class="card">
+                                        <div class="cardImageWrapper" dataLable="4:5">
+                                            <div class="cardImage">
+                                                <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3816/Impressive%20big%20golden%20statues%20in%20Swayambhu%20Environmental%20Park.jpg?crop=192:285&downsize=192:285" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="cardContainer">
+                                            <div class="cardName">Nepal</div>
+                                            <div class="cardOffer">Starting at <strong>$2,200</strong> Per person</div>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                                <ng-template carouselSlide>
+                                    <div class="card">
+                                        <div class="cardImageWrapper" dataLable="4:5">
+                                            <div class="cardImage">
+                                                <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/734/paris4.jpg?crop=192:285&downsize=192:285" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="cardContainer">
+                                            <div class="cardName">France</div>
+                                            <div class="cardOffer">Starting at <strong>$2,200</strong> Per person</div>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                                <ng-template carouselSlide>
+                                    <div class="card">
+                                        <div class="cardImageWrapper" dataLable="4:5">
+                                            <div class="cardImage">
+                                                <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/644/cairo1.jpg?crop=192:285&downsize=192:285" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="cardContainer">
+                                            <div class="cardName">Egypt</div>
+                                            <div class="cardOffer">Starting at <strong>$2,200</strong> Per person</div>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                                <ng-template carouselSlide>
+                                    <div class="card">
+                                        <div class="cardImageWrapper" dataLable="4:5">
+                                            <div class="cardImage">
+                                                <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/124/Southbank-Promenade-Melbourne.jpg?crop=192:285&downsize=192:285" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="cardContainer">
+                                            <div class="cardName">Australia</div>
+                                            <div class="cardOffer">Starting at <strong>$2,200</strong> Per person</div>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                                <ng-template carouselSlide>
+                                    <div class="card">
+                                        <div class="cardImageWrapper" dataLable="4:5">
+                                            <div class="cardImage">
+                                                <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/4916/kuta.jpg?crop=192:285&downsize=192:285" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="cardContainer">
+                                            <div class="cardName">Goa</div>
+                                            <div class="cardOffer">Starting at <strong>$2,200</strong> Per person</div>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </owl-carousel-o>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="module">
+        <div class="container-xl">
+            <div class="box">
+                <div class="boxHeading">Best Tour Destinations
+                    <button mat-flat-button color="accent" class="btn-sm ml-auto" [routerLink]="['/tour-listing']">View All</button>
+                </div>
+                <div class="boxBody">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card box" matTooltip="Dubai Holiday 3N - Super Saver">
+                                <div class="cardImageWrapper" dataLable="4:3">
+                                    <div class="cardImage">
+                                        <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3147/ZO.jpg?crop=370:240&downsize=370:240" alt="">
+                                    </div>
+                                    <div class="cardImageShadow"></div>
+                                    <div class="cardDay">3N/4D</div>
+                                </div>
+                                <div class="cardBody">
+                                    <div class="cardHeading text-ellipsis">Dubai Holiday 3N - Super Saver</div>
+                                    <div class="cardPrice ">$3,564
+                                        <span>$4,500</span>
+                                        <div class="cardOffer">per person</div>
+                                    </div>
+                                </div>
+                                <div class="cardFooter">
+                                    <ul class="cardAmenity">
+                                        <li>
+                                            <mat-icon>flight</mat-icon>
+                                            Flight
+                                        </li>
+                                        <li>
+                                            <mat-icon>apartment</mat-icon>
+                                            Hotel
+                                        </li>
+                                        <li>
+                                            <mat-icon>hiking</mat-icon>
+                                            Activity
+                                        </li>
+                                        <li>
+                                            <mat-icon>directions_bus</mat-icon>
+                                            Transfar
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card box" matTooltip="Family Special Dubai Shopping Holiday">
+                                <div class="cardImageWrapper" dataLable="4:3">
+                                    <div class="cardImage">
+                                        <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3147/Dubai-Fountain.jpg?crop=370:240&downsize=370:240" alt="">
+                                    </div>
+                                    <div class="cardImageShadow"></div>
+                                    <div class="cardDay">3N/4D</div>
+                                </div>
+                                <div class="cardBody">
+                                    <div class="cardHeading text-ellipsis">Family Special Dubai Shopping Holiday</div>
+                                    <div class="cardPrice ">$3,564
+                                        <span>$4,500</span>
+                                        <div class="cardOffer">per person</div>
+                                    </div>
+                                </div>
+                                <div class="cardFooter">
+                                    <ul class="cardAmenity">
+                                        <li>
+                                            <mat-icon>flight</mat-icon>
+                                            Flight
+                                        </li>
+                                        <li>
+                                            <mat-icon>apartment</mat-icon>
+                                            Hotel
+                                        </li>
+                                        <li>
+                                            <mat-icon>hiking</mat-icon>
+                                            Activity
+                                        </li>
+                                        <li>
+                                            <mat-icon>directions_bus</mat-icon>
+                                            Transfar
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card box" matTooltip="Top Attractions-Dubai Holidays (Family Friendly)">
+                                <div class="cardImageWrapper" dataLable="4:3">
+                                    <div class="cardImage">
+                                        <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3147/ZB.jpg?crop=370:240&downsize=370:240" alt="">
+                                    </div>
+                                    <div class="cardImageShadow"></div>
+                                    <div class="cardDay">3N/4D</div>
+                                </div>
+                                <div class="cardBody">
+                                    <div class="cardHeading text-ellipsis">Top Attractions-Dubai Holidays (Family Friendly)</div>
+                                    <div class="cardPrice ">$3,564
+                                        <span>$4,500</span>
+                                        <div class="cardOffer">per person</div>
+                                    </div>
+                                </div>
+                                <div class="cardFooter">
+                                    <ul class="cardAmenity">
+                                        <li>
+                                            <mat-icon>flight</mat-icon>
+                                            Flight
+                                        </li>
+                                        <li>
+                                            <mat-icon>apartment</mat-icon>
+                                            Hotel
+                                        </li>
+                                        <li>
+                                            <mat-icon>hiking</mat-icon>
+                                            Activity
+                                        </li>
+                                        <li>
+                                            <mat-icon>directions_bus</mat-icon>
+                                            Transfar
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card box" matTooltip="Magical Dubai 3N with 2N Atlantis">
+                                <div class="cardImageWrapper" dataLable="4:3">
+                                    <div class="cardImage">
+                                        <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3147/The-multi-million-dollar-Atlantis-Resort.jpg?crop=370:240&downsize=370:240" alt="">
+                                    </div>
+                                    <div class="cardImageShadow"></div>
+                                    <div class="cardDay">3N/4D</div>
+                                </div>
+                                <div class="cardBody">
+                                    <div class="cardHeading text-ellipsis">Magical Dubai 3N with 2N Atlantis</div>
+                                    <div class="cardPrice ">$3,564
+                                        <span>$4,500</span>
+                                        <div class="cardOffer">per person</div>
+                                    </div>
+                                </div>
+                                <div class="cardFooter">
+                                    <ul class="cardAmenity">
+                                        <li>
+                                            <mat-icon>flight</mat-icon>
+                                            Flight
+                                        </li>
+                                        <li>
+                                            <mat-icon>apartment</mat-icon>
+                                            Hotel
+                                        </li>
+                                        <li>
+                                            <mat-icon>hiking</mat-icon>
+                                            Activity
+                                        </li>
+                                        <li>
+                                            <mat-icon>directions_bus</mat-icon>
+                                            Transfar
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear20"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="module">
+        <div class="container-xl">
+            <div class="box">
+                <div class="boxHeading">International Destinations Now Open</div>
+                <div class="boxBody">
+                    <owl-carousel-o [options]="internationalSlider">
+                        <ng-template carouselSlide>
+                            <div class="card">
+                                <div class="cardImageWrapper" dataLable="4:5">
+                                    <div class="cardImage">
+                                        <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/1993/Grand%20Park.JPG?crop=192:285&downsize=192:285" alt="">
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="cardName">Maldives</div>
+                                    <div class="cardOffer">Starting at <strong>$2,200</strong> Per person</div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="card">
+                                <div class="cardImageWrapper" dataLable="4:5">
+                                    <div class="cardImage">
+                                        <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3067/I.jpg?crop=192:285&downsize=192:285" alt="">
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="cardName">Thailand</div>
+                                    <div class="cardOffer">Starting at <strong>$2,200</strong> Per person</div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="card">
+                                <div class="cardImageWrapper" dataLable="4:5">
+                                    <div class="cardImage">
+                                        <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3198/shutterstock_176887880.jpg?crop=192:285&downsize=192:285" alt="">
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="cardName">Europe</div>
+                                    <div class="cardOffer">Starting at <strong>$2,200</strong> Per person</div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="card">
+                                <div class="cardImageWrapper" dataLable="4:5">
+                                    <div class="cardImage">
+                                        <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/2514/singapore1.jpg?crop=192:285&downsize=192:285" alt="">
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="cardName">Singapore</div>
+                                    <div class="cardOffer">Starting at <strong>$2,200</strong> Per person</div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="card">
+                                <div class="cardImageWrapper" dataLable="4:5">
+                                    <div class="cardImage">
+                                        <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/4916/kuta.jpg?crop=192:285&downsize=192:285" alt="">
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="cardName">Bali</div>
+                                    <div class="cardOffer">Starting at <strong>$2,200</strong> Per person</div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="card">
+                                <div class="cardImageWrapper" dataLable="4:5">
+                                    <div class="cardImage">
+                                        <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/2004/RBA_Beach01.jpg?crop=192:285&downsize=192:285" alt="">
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="cardName">Mauritius</div>
+                                    <div class="cardOffer">Starting at <strong>$2,200</strong> Per person</div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="card">
+                                <div class="cardImageWrapper" dataLable="4:5">
+                                    <div class="cardImage">
+                                        <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3147/majestic-mauritus-and-dubai.jpg?crop=192:285&downsize=192:285" alt="">
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="cardName">Dubai</div>
+                                    <div class="cardOffer">Starting at <strong>$2,200</strong> Per person</div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="card">
+                                <div class="cardImageWrapper" dataLable="4:5">
+                                    <div class="cardImage">
+                                        <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3127/Golden-Horn,-Istanbul,-Turkey.jpg?crop=192:285&downsize=192:285" alt="">
+                                    </div>
+                                </div>
+                                <div class="cardContainer">
+                                    <div class="cardName">Turkey</div>
+                                    <div class="cardOffer">Starting at <strong>$2,200</strong> Per person</div>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </owl-carousel-o>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="search">
+        <div class="container-xl">
+        </div>
+    </section>
+</div>
+<app-info></app-info>
+<app-footer></app-footer>

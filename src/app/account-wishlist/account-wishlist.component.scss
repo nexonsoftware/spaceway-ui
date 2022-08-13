@@ -1,0 +1,9 @@
+ul.tourListing.listView{list-style: none;padding: 0;margin:0 ;
+	&>li{width: 100%;padding: 0.9375rem 0;
+		&:hover{
+			.card{cursor: pointer;
+				&Image{transform: scale(1.05, 1.05);}
+			}
+		}
+	}
+}

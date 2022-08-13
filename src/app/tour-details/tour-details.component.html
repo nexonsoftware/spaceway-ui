@@ -1,0 +1,584 @@
+<app-header></app-header>
+<div class="main">
+    <div class="container">
+        <div aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item" [routerLink]="['/']">Home</li>
+                <li class="breadcrumb-item" [routerLink]="['/tour']">Tour</li>
+                <li class="breadcrumb-item" [routerLink]="['/tour-listing']">Tour Listing</li>
+                <li class="breadcrumb-item active" aria-current="page">Magical Himachal from Delhi </li>
+            </ol>
+        </div>
+        <div class="tourBanner">
+            <div class="tourDays">5N/6D</div>
+            <div class="tourBtn">
+                <button mat-flat-button color="">All Photos</button>
+            </div>
+            <ul class="photoContainer">
+                <li class="photoItem1">
+                    <div class="photoWrapper">
+                        <div class="photoBox">
+                            <img src="assets/images/img.jpg" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li class="photoItem2">
+                    <div class="photoWrapper">
+                        <div class="photoBox">
+                            <img src="assets/images/img1.jpg" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li class="photoItem3">
+                    <div class="photoWrapper">
+                        <div class="photoBox">
+                            <img src="assets/images/img2.jpg" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li class="photoItem4">
+                    <div class="photoWrapper">
+                        <div class="photoBox">
+                            <img src="assets/images/img3.jpg" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li class="photoItem5">
+                    <div class="photoWrapper">
+                        <div class="photoBox">
+                            <img src="assets/images/img4.jpg" alt="">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="tourInfo listView">
+            <div class="card box">
+                <div class="cardFooter">
+                    <div class="cardPrice ">
+                        <span>$4,500</span> $3,564
+                        <div class="cardOffer mt-0">per person</div>
+                    </div>
+                    <div class="clear10"></div>
+                    <button mat-flat-button color="primary" [routerLink]="['/tour']">Book Now</button>
+                </div>
+                <div class="cardBody">
+                    <div class="cardTitle">Magical Himachal from Delhi (With Flights)</div>
+                    <div class="cardDes ">
+                        <p [ngClass]="textView ? '' : 'text-clamp'">Himachal Pradesh is a northern Indian state in the Himalayas. It's home to scenic mountain towns and resorts such as Dalhousie. Host to the Dalai Lama, Himachal Pradesh has a strong Tibetan presence. This is reflected in its Buddhist
+                            temples and monasteries, as well as its vibrant Tibetan New Year celebrations. The region is also well known for its trekking, climbing and skiing areas.</p><a class="text-primary" (click)="textView = !textView;">{{textView ? 'Show Less' : 'Show More'}}</a></div>
+                    <div class="cardPrice ">$3,564
+                        <span>$4,500</span>
+                        <div class="cardOffer mt-0">per person</div>
+                    </div>
+                    <ul class="cardAmenity">
+                        <li>
+                            <mat-icon>restaurant</mat-icon>
+                            Meals
+                        </li>
+                        <li>
+                            <mat-icon>flight</mat-icon>
+                            Flight
+                        </li>
+                        <li>
+                            <mat-icon>apartment</mat-icon>
+                            Hotel
+                        </li>
+                        <li>
+                            <mat-icon>hiking</mat-icon>
+                            Activity
+                        </li>
+                        <li>
+                            <mat-icon>directions_bus</mat-icon>
+                            Transfar
+                        </li>
+                        <li>
+                            <mat-icon>camera</mat-icon>
+                            Sightseeing
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tourDetails">
+            <div class="box">
+                <mat-tab-group animationDuration="0ms">
+                    <mat-tab label="Hotels & Transport">
+                        <div class="tourDetailsBody">
+                            <mat-accordion multi openAll>
+                                <mat-expansion-panel expanded>
+                                    <mat-expansion-panel-header>
+                                        Day 1
+                                    </mat-expansion-panel-header>
+                                    <ul class="tourListing listView">
+                                        <li>
+                                            <div class="card ">
+                                                <div class="cardImageWrapper" dataLable="4:3">
+                                                    <div class="cardImage">
+                                                        <mat-icon>flight</mat-icon>
+                                                    </div>
+                                                    <div class="cardImageShadow"></div>
+                                                </div>
+                                                <div class="cardBody">
+                                                    <div class="cardHeading text-ellipsis">Flight from New Delhi to Chandigarh 55m</div>
+                                                    <div class="cardOffer">Departure : New Delhi 05:40</div>
+                                                    <div class="cardOffer">Arrival : Chandigarh Airport 06:35</div>
+                                                    <div class="cardOffer">Baggage : Cabin : 7 Kgs (1 piece only) | Check-in : 15 Kgs (1 piece only)</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="card ">
+                                                <div class="cardImageWrapper" dataLable="4:3">
+                                                    <div class="cardImage">
+                                                        <mat-icon>drive_eta</mat-icon>
+                                                    </div>
+                                                    <div class="cardImageShadow"></div>
+                                                </div>
+                                                <div class="cardBody">
+                                                    <div class="cardHeading text-ellipsis">Transfer from Airport in Chandigarh to hotel in Shimla</div>
+                                                    <div class="cardName font-weight-bold">Swift, Etios or similar</div>
+                                                    <div class="cardOffer">Transfer from Private AC Sedan </div>
+                                                    <div class="cardOffer">Facilities : 4 Seater | 3 Luggage Bags | AC | First Aid</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="card ">
+                                                <div class="cardImageWrapper" dataLable="4:3">
+                                                    <div class="cardImage">
+                                                        <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3147/ZO.jpg?crop=370:240&downsize=370:240" alt="">
+                                                    </div>
+                                                    <div class="cardImageShadow"></div>
+                                                </div>
+                                                <div class="cardBody">
+                                                    <div class="cardHeading text-ellipsis">Sightseeing in Shimla</div>
+                                                    <div class="cardName font-weight-bold">Private Transfer</div>
+
+                                                    <div class="cardOffer">PLACES COVERED : 1</div>
+                                                    <div class="cardOffer">DURATION : On the way to hotel</div>
+                                                    <div class="cardOffer text-green">&bull; Pinjore Gardens</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="card ">
+                                                <div class="cardImageWrapper" dataLable="4:3">
+                                                    <div class="cardImage">
+                                                        <img src="https://imgcld.yatra.com/ytimages/image/upload/t_seo_Hotel_w_930_h_550_c_fill_g_auto_q_40_f_jpg/v1474180378/Domestic%20Hotels/Hotels_Shimla/Summit%20Le%20Royale/Exterior_2.jpg" alt="">
+                                                    </div>
+                                                    <div class="cardImageShadow"></div>
+                                                    <div class="cardDay">3N/4D</div>
+                                                </div>
+                                                <div class="cardBody">
+                                                    <div class="cardHeading text-ellipsis">Check-in to Hotel in Lakkar Bazaar @ 2 PM</div>
+                                                    <div class="cardName font-weight-bold">Summit Le Royale or similar</div>
+                                                    <div class="cardOffer">Address : Lakkar Bazaar, 63 m from The Ridge of Shimla</div>
+                                                    <div class="cardOffer">Room Type : Deluxe Room</div>
+                                                    <div class="cardOffer">Includes Breakfast</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </mat-expansion-panel>
+                                <mat-expansion-panel expanded>
+                                    <mat-expansion-panel-header>
+                                        Day 2
+                                    </mat-expansion-panel-header>
+                                    <ul class="tourListing listView">
+                                        <li>
+                                            <div class="card ">
+                                                <div class="cardImageWrapper" dataLable="4:3">
+                                                    <div class="cardImage">
+                                                        <mat-icon>drive_eta</mat-icon>
+                                                    </div>
+                                                    <div class="cardImageShadow"></div>
+                                                </div>
+                                                <div class="cardBody">
+                                                    <div class="cardHeading">Sightseeing in & around Shimla</div>
+                                                    <div class="cardName font-weight-bold">Swift, Etios or similar</div>
+                                                    <div class="cardOffer">Transfer from Private AC Sedan </div>
+                                                    <div class="cardOffer">Facilities : 4 Seater | 3 Luggage Bags | AC | First Aid</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="card ">
+                                                <div class="cardImageWrapper" dataLable="4:3">
+                                                    <div class="cardImage">
+                                                        <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3147/ZO.jpg?crop=370:240&downsize=370:240" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="cardBody">
+                                                    <div class="cardHeading text-ellipsis">Sightseeing in Shimla</div>
+                                                    <div class="cardDes">Private Transfer</div>
+
+                                                    <div class="cardOffer">DURATION : 7 hrs</div>
+                                                    <div class="cardOffer">PLACES COVERED : 6</div>
+                                                    <ul class="cardList">
+                                                        <li> Indira Bunglow</li>
+                                                        <li> Mall road</li>
+                                                        <li> Shimla Church</li>
+                                                        <li> Scandal point</li>
+                                                        <li> Gaeity Theatre</li>
+                                                        <li> Townhall</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="text-center">End Of Day - Spend time at Leisure or add an activity to your day</div>
+                                </mat-expansion-panel>
+                                <mat-expansion-panel expanded>
+                                    <mat-expansion-panel-header>
+                                        Day 3
+                                    </mat-expansion-panel-header>
+                                    <ul class="tourListing listView">
+
+                                        <li>
+                                            <div class="card ">
+                                                <div class="cardImageWrapper" dataLable="4:3">
+                                                    <div class="cardImage">
+                                                        <mat-icon>drive_eta</mat-icon>
+                                                    </div>
+                                                    <div class="cardImageShadow"></div>
+                                                </div>
+                                                <div class="cardBody">
+                                                    <div class="cardHeading text-ellipsis">Checkout from Hotel in Shimla and Transfer to Manali</div>
+                                                    <div class="cardName font-weight-bold">Swift, Etios or similar</div>
+                                                    <div class="cardOffer">Transfer from Private AC Sedan </div>
+                                                    <div class="cardOffer">Facilities : 4 Seater | 3 Luggage Bags | AC | First Aid</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="card ">
+                                                <div class="cardImageWrapper" dataLable="4:3">
+                                                    <div class="cardImage">
+                                                        <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3147/ZO.jpg?crop=370:240&downsize=370:240" alt="">
+                                                    </div>
+                                                    <div class="cardImageShadow"></div>
+                                                </div>
+                                                <div class="cardBody">
+                                                    <div class="cardHeading text-ellipsis">Sightseeing in Manali</div>
+                                                    <div class="cardName font-weight-bold">Private Transfer</div>
+
+                                                    <div class="cardOffer">DURATION : On the way to Manali</div>
+                                                    <div class="cardOffer">PLACES COVERED : 1</div>
+                                                    <ul class="cardList ">
+                                                        <li>Pandoh Dam</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="card ">
+                                                <div class="cardImageWrapper" dataLable="4:3">
+                                                    <div class="cardImage">
+                                                        <img src="https://imgcld.yatra.com/ytimages/image/upload/t_seo_Hotel_w_930_h_550_c_fill_g_auto_q_40_f_jpg/v1474180378/Domestic%20Hotels/Hotels_Shimla/Summit%20Le%20Royale/Exterior_2.jpg" alt="">
+                                                    </div>
+                                                    <div class="cardImageShadow"></div>
+                                                </div>
+                                                <div class="cardBody">
+                                                    <div class="cardHeading text-ellipsis">Check-in to Hotel in Hadimba Temple Rd @ 12 PM</div>
+                                                    <div class="cardName font-weight-bold">Kapoor Resort by DLS Hotels</div>
+                                                    <div class="cardOffer">Address : Hadimba Temple Rd, 790 m from Hidimba Devi Temple</div>
+                                                    <div class="cardOffer">Room Type : Deluxe Room - Holiday Selection </div>
+                                                    <div class="cardOffer">Includes Breakfast</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="text-center">End Of Day - Spend time at Leisure or add an activity to your day</div>
+                                </mat-expansion-panel>
+                                <mat-expansion-panel expanded>
+                                    <mat-expansion-panel-header>Day 4 - Manali</mat-expansion-panel-header>
+                                    <ul class="tourListing listView">
+
+                                        <li>
+                                            <div class="card ">
+                                                <div class="cardImageWrapper" dataLable="4:3">
+                                                    <div class="cardImage">
+                                                        <mat-icon>drive_eta</mat-icon>
+                                                    </div>
+                                                    <div class="cardImageShadow"></div>
+                                                </div>
+                                                <div class="cardBody">
+                                                    <div class="cardHeading text-ellipsis">Transfer from Private AC Sedan - AC for sightseeing in & around Manali</div>
+                                                    <div class="cardName font-weight-bold">Swift, Etios or similar</div>
+                                                    <div class="cardOffer">Transfer from Private AC Sedan </div>
+                                                    <div class="cardOffer">Facilities : 4 Seater | 3 Luggage Bags | AC | First Aid</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="card ">
+                                                <div class="cardImageWrapper" dataLable="4:3">
+                                                    <div class="cardImage">
+                                                        <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3147/ZO.jpg?crop=370:240&downsize=370:240" alt="">
+                                                    </div>
+                                                    <div class="cardImageShadow"></div>
+                                                </div>
+                                                <div class="cardBody">
+                                                    <div class="cardHeading text-ellipsis">Sightseeing in Manali</div>
+                                                    <div class="cardName font-weight-bold">Private Transfer</div>
+
+                                                    <div class="cardOffer">DURATION : 2hrs</div>
+                                                    <div class="cardOffer">PLACES COVERED : 1</div>
+                                                    <ul class="cardList ">
+                                                        <li>Solang Valley</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="text-center">End Of Day - Spend time at Leisure or add an activity to your day</div>
+                                </mat-expansion-panel>
+                                <mat-expansion-panel expanded>
+                                    <mat-expansion-panel-header>
+                                        Day 5 - Manali
+                                    </mat-expansion-panel-header>
+                                    <ul class="tourListing listView">
+                                        <li>
+                                            <div class="card ">
+                                                <div class="cardImageWrapper" dataLable="4:3">
+                                                    <div class="cardImage">
+                                                        <mat-icon>drive_eta</mat-icon>
+                                                    </div>
+                                                    <div class="cardImageShadow"></div>
+                                                </div>
+                                                <div class="cardBody">
+                                                    <div class="cardHeading">Transfer from Private AC Sedan - AC for sightseeing in & around Manali</div>
+                                                    <div class="cardName font-weight-bold">Swift, Etios or similar</div>
+                                                    <div class="cardOffer">Transfer from Private AC Sedan </div>
+                                                    <div class="cardOffer">Facilities : 4 Seater | 3 Luggage Bags | AC | First Aid</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="card ">
+                                                <div class="cardImageWrapper" dataLable="4:3">
+                                                    <div class="cardImage">
+                                                        <img src="https://hldak.mmtcdn.com/prod-s3-hld-hpcmsadmin/holidays/images/cities/3147/ZO.jpg?crop=370:240&downsize=370:240" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="cardBody">
+                                                    <div class="cardHeading text-ellipsis">Sightseeing in Manali</div>
+                                                    <div class="cardDes">Manali, India</div>
+
+                                                    <div class="cardOffer">DURATION : 5 hrs</div>
+                                                    <div class="cardOffer">PLACES COVERED : 3</div>
+                                                    <ul class="cardList">
+                                                        <li> Hadimba Temple</li>
+                                                        <li> Tibetan Monastery</li>
+                                                        <li> Vashishth Kund</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="text-center">End Of Day - Spend time at Leisure or add an activity to your day</div>
+                                </mat-expansion-panel>
+                            </mat-accordion>
+                        </div>
+                    </mat-tab>
+                    <mat-tab label="Detailed Itinerary">
+                        <div class="tourDetailsBody">
+                            <ul class="tourItinerary">
+                                <li>
+                                    <strong>Day 1 - Delhi - Shimla</strong><br> On your Arrival at Delhi our transporter will meet you and proceed for Shimla. Arrive Shimla by Afternoon, check in hotel . Evening free to visit Mall Road after refreshment
+                                    . Dinner and overnight stay at Hotel</li>
+
+                                <li>
+                                    <strong>Day 2 - Shimla Local Sightseeing & Kufri</strong><br> After breakfast check out from hotel and proceed for wonderful day excursion to Kufri. In Kufri enjoy a walk through thick woods to Mahasu Pick for amazing
+                                    view of mighty Himalayas. Enjoy Horse riding at your own cost. You can do wonderful photography also. After that proceed to Manali. Check in hotel. Evening free to visit mall road. Dinner & Overnight at Hotel.</li>
+
+                                <li>
+                                    <strong>Day 3 - Shimla - Manali (En-route visit Kullu)</strong><br> Morning enjoy breakfast in hotel restaurant and then check out from hotel and proceed to manali and we will do enroute sightseeing of Kullu which is
+                                    famous for river rafting. Enjoy river rafting in beas river. Also watch Kullu Valley, shawl factory visit etc. After that proceed for hotel in manali. Check in hotel. Dinner in hotel restaurant. Overnight stay in Manali
+                                    Hotel.</li>
+
+                                <li>
+                                    <strong>Day 4 - Manali Local Sightseeing</strong><br> Morning enjoy breakfast in hotel restaurant and then proceed to local sightseeing of manali in which you cover Vashist village, hadimbadevi temple, club house, Van
+                                    vihar (National Park in manali), Monasteries, and the famous mall road. Dinner & overnight at hotel.</li>
+
+                                <li>
+                                    <strong>Day 5 - Manali Solang Valley / Snow Point</strong><br> Morning enjoy breakfast in hotel restaurant and then proceed to solang valley which is the famous snow point of manali. Enjoy snow activities like paragliding,
+                                    skating, ice scooter, ice tube etc (By Own). After that back to hotel. Dinner in restaurant of hotel. Overnight at manali hotel.</li>
+
+                                <li>
+                                    <strong>Day 6 - Manali - Dharamshala</strong><br> Morning enjoy breakfast in hotel restaurant and then check out from hotel and proceed to dharamshala. A distance of 260 kilometer on the way stopping at Baijnath known
+                                    for its Shiva Temple and further at Palampur famous For Tea Garden. Dharamhsala is a hill-station lying on the spur of the Dhauladhar Mountains about 18 kms north-east of Kangra, It is known for its scenic beauty set
+                                    amidst high pine and oak trees. Since 1960, when it became the temporary headquarters of His Holiness The Dalai Lama, Dharamshala has risen to international repute as The Little Lhasa in India. Check in hotel. Dinner
+                                    in hotel restaurant. Overnight stay in Dharamshala Hotel.</li>
+
+                                <li>
+                                    <strong>Day 7 - Dharamshala Sightseeing - Dalhousie</strong><br> Morning after breakfast check out from hotel and proceed to visit sightseeing of famous Mc Leodgunj, War memorial, Bhagsunath temple and Dal Lake. After
+                                    that proceed to Dalhousie. Check in hotel. Evening free to visit mall road. Dinner & Overnight at Hotel</li>
+
+                                <li>
+                                    <strong>Day 8 - Dalhousie Khajjiar Visit</strong><br> Morning after breakfast visit Khajjiar Often called India's Mini Switzerland, the exquisite glade of Khajjiar (1960m) has a circumference of about 5 km. Along its
+                                    fringes, thick forests of deodar climb the slopes, the snow-line rests above these woods. At Khajjiar there is a 12th century temple known as KhajjI Nag. Within the temple there are life size wooden images of the five
+                                    Pandav brothers. Evening back to booked hotel . Dinner dinner in your hotel restaurant. Overnight stay at Dalhousie hotel.</li>
+
+                                <li>
+                                    <strong>Day 9 - Dalhousie - Delhi</strong><br> Morning after breakfast check out from hotel and proceed to Delhi for your onward Journey</li>
+                            </ul>
+                        </div>
+                    </mat-tab>
+                    <mat-tab label="Photo">
+                        <div class="tourDetailsBody">
+                            a
+                        </div>
+                    </mat-tab>
+                    <mat-tab label="Information">
+                        <div class="tourDetailsBody">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h4 class="heading">Inclusions</h4>
+                                    <ul class="tourItinerary">
+                                        <li>Dinner</li>
+                                        <li>Breakfast</li>
+                                        <li>Sightseeing by private car</li>
+                                        <li>Pickup &amp; Drop by Private Cab</li>
+                                        <li>All tours and transfers by Personal Car is included</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h4 class="heading">Inclusions</h4>
+                                    <ul class="tourItinerary">
+                                        <li>Camera fee</li>
+                                        <li>Alcoholic / Non- Alcoholic beverages</li>
+                                        <li>Travel insurance</li>
+                                        <li>5% GST</li>
+                                        <li>Any Airfare / Train fare</li>
+                                        <li>Expenses caused by factors beyond our control like rail and flight delays, roadblocks, vehicle mal-functions, political disturbances etc.</li>
+                                        <li>Tips, laundry &amp; phone call</li>
+                                        <li>Entrance fees to monuments and museum</li>
+                                        <li>All personal expenses</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h4 class="heading">Payment Policy</h4>
+                                    <ul class="tourItinerary">
+                                        <li>30 or more days before departure: 50%</li>
+                                        <li>Between 29 to 15 days before departure: 65%</li>
+                                        <li>Between 14 to 1 days before departure: 100%</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h4 class="heading">Cancellation Policy</h4>
+                                    <ul class="tourItinerary">
+                                        <li>30 or more days before departure: 25%</li>
+                                        <li>Between 29 to 15 days before departure: 50%</li>
+                                        <li>Between 14 to 1 days before departure: 100%</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </mat-tab>
+                    <mat-tab label="About the Place">
+                        <div class="tourDetailsBody">
+                            <ul class="tourListing listView">
+
+                                <li>
+                                    <div class="card ">
+                                        <div class="cardImageWrapper" dataLable="4:3">
+                                            <div class="cardImage">
+                                                <img src="https://img.cdn.zostel.com/blog_photo/chamera-lake.jpg" alt="">
+                                            </div>
+                                            <div class="cardImageShadow"></div>
+                                        </div>
+                                        <div class="cardBody">
+                                            <div class="cardHeading text-ellipsis">Dalhousie</div>
+                                            <div class="cardName ">Referred to as the Queen of Himachal Pradesh, Manali is an ancient town that is located at an altitude of nearly 2050 meters in Kullu district. Manali is blessed with breathtaking natural beauty that comprises
+                                                lofty snow-capped peaks of Dhauladhar and Pir Panjal, thick forests, fruit orchards, beautiful hamlets and meadows that are carpeted with lovely wild flowers. Being a high altitude resort town, Manali is
+                                                an all-year-round destination that offers alluring vistas. An ideal destination for Honeymooners and adventure junkies alike, the town of Manali is a mix of old and new. Being a hub of adventure activities,
+                                                Manali offers enthralling escapades of skiing, paragliding, trekking, mountaineering and rafting. Get enchanted by the surrealistic snowscape of Rohtang Pass or the Snow Point. Lose yourself in the spiritual
+                                                realm by paying a visit to Hadimba Temple, Vashisth Bath and Van Vi</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="card ">
+                                        <div class="cardImageWrapper" dataLable="4:3">
+                                            <div class="cardImage">
+                                                <img src="https://img.traveltriangle.com/blog/wp-content/uploads/2019/11/Homestays-In-Dharamshala-cover_19th-Nov.jpg" alt="">
+                                            </div>
+                                            <div class="cardImageShadow"></div>
+                                        </div>
+                                        <div class="cardBody">
+                                            <div class="cardHeading text-ellipsis">Dharamshala </div>
+                                            <div class="cardName">Home to the holy abode of the Dalai Lama at McLeod Ganj, this town located in Kangra Valley has numerous Buddhist monasteries, scattered amidst the hills surrounding this region. With the establishment of the
+                                                Tibetan government-in-exile, the traditions and flavors of Tibet have found its way into the culture and cuisine of Dharamshala. The region also has many ancient temples and beautiful churches built during
+                                                the reign of the British, tucked away in the lush green forests. Dharamshala boasts of an International Cricket Stadium, which has hosted many international and IPL cricket matches. The Dharamshala International
+                                                Film Festival (DIFF) is held every year, in the month of November.</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="card ">
+                                        <div class="cardImageWrapper" dataLable="4:3">
+                                            <div class="cardImage">
+                                                <img src="https://hotelkingpalaceshimla.in/sub/images/sightseeing/christ-church-shimla-s.jpg" alt="">
+                                            </div>
+                                            <div class="cardImageShadow"></div>
+                                        </div>
+                                        <div class="cardBody">
+                                            <div class="cardHeading text-ellipsis">Shimla </div>
+                                            <div class="cardName">A wonderful abode in the Himalayas, the city of Shimla is surrounded by scenic pine-covered hills and snow-capped peaks. Located in the magnificent hill state of Himachal Pradesh in India, it is one of the most
+                                                popular tourist destinations in the country. From honeymooners to adventure seekers, the city serves as a charming retreat to a large number of people. The enchanting beauty of this hill station has attracted
+                                                countless filmmakers and cinematographers. This erstwhile summer capital of the British, still retains its colonial-era charm through its spectacular historical churches and institutes, like Christ Church,
+                                                Indian Institute of Advanced Study and many more. The majestic Himalayas have a certain allure that makes you forget all your worries. Walk along the charming Mall Road and fill your shopping bags with beautiful
+                                                souvenirs. When you are exhausted with all the shopping, you can satiate your taste buds with hot, steaming local food. Revel in the picturesque views from the scenic Jakhoo Hill or explore your spiritual
+                                                side at the ancient Jakhoo Temple. Indulge in the adrenaline-pumping activities such as skiing, bungee jumping and zip-lining at Kufri. Shimla gives its tourists the chance to discover the best of the Himalayas,
+                                                completed by rich cultural heritage and enthralling attractions.</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="card ">
+                                        <div class="cardImageWrapper" dataLable="4:3">
+                                            <div class="cardImage">
+                                                <img src="https://www.agrashivtourandtravels.com/wp-content/uploads/2020/12/Manali.jpg" alt="">
+                                            </div>
+                                            <div class="cardImageShadow"></div>
+                                        </div>
+                                        <div class="cardBody">
+                                            <div class="cardHeading text-ellipsis">Manali </div>
+                                            <div class="cardName">Referred to as the Queen of Himachal Pradesh, Manali is an ancient town that is located at an altitude of nearly 2050 meters in Kullu district. Manali is blessed with breathtaking natural beauty that comprises
+                                                lofty snow-capped peaks of Dhauladhar and Pir Panjal, thick forests, fruit orchards, beautiful hamlets and meadows that are carpeted with lovely wild flowers. Being a high altitude resort town, Manali is
+                                                an all-year-round destination that offers alluring vistas. An ideal destination for Honeymooners and adventure junkies alike, the town of Manali is a mix of old and new. Being a hub of adventure activities,
+                                                Manali offers enthralling escapades of skiing, paragliding, trekking, mountaineering and rafting. Get enchanted by the surrealistic snowscape of Rohtang Pass or the Snow Point. Lose yourself in the spiritual
+                                                realm by paying a visit to Hadimba Temple, Vashisth Bath and Van Vihar. Shopping at the famous Mall Road is fun as it is the most throbbing spot of the city lined with hotels and eateries. With all these
+                                                attractions and abundance of natural beauty, Manali makes an ideal holiday destination for everyone</div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </mat-tab>
+                    <mat-tab label="T & C">
+                        <div class="tourDetailsBody">
+                            <h4 class="heading">Terms & Conditions</h4>
+                            <ul class="tourItinerary">
+                                <li>No extra bed will be provided for children below 5 years of age.</li>
+                                <li>The hotel check-in time 12:00 PM and the check-out time is 11:00 AM.</li>
+                                <li>Carrying a government-issued ID proof like Passport, Aadhar Card, driving license, etc. is mandatory for the guest.</li>
+                                <li>Price specifications for kids: Children below 5 years: complimentary. Children between 5 to 11 years: Extra chargeable. Children above 11 years are counted as adults.</li>
+                                <li>Meals will be as per the plan provided.</li>
+                                <li>Any entry fee will be paid by the client directly.</li>
+                                <li>Similar hotels will be provided in case of mentioned hotels not being available.</li>
+                                <li>Any delay or cancellation of a program due to the weather or other reasons will not be eligible for a refund.</li>
+                                <li>The above tour cost is calculated as per the current taxes, visa charges and other charges as per the current date. Changes if any will have to be mentioned before the date of departure. Any additional cost will have to
+                                    borne by the client</li>
+                            </ul>
+                        </div>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+        </div>
+    </div>
+</div>
+<app-info></app-info>
+<app-footer></app-footer>

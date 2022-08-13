@@ -1,0 +1,92 @@
+<form [formGroup]="_hotelSearchForm" (ngSubmit)="hotelSearchSubmit()">
+<ul class="searchElement">
+	
+    <li class="w-100">
+        <!-- <mat-form-field appearance="fill">
+            <mat-label>Where</mat-label>
+            <mat-icon matPrefix class="material-icons-outlined">search</mat-icon>
+            <input matInput placeholder="e.g. - Area, Landmark or Property Name">
+        </mat-form-field> -->
+        <mat-form-field appearance="fill">
+            <mat-label>Destination City </mat-label>
+            <mat-icon matPrefix class="material-icons-outlined">location_on</mat-icon>
+            <input matInput required="" formControlName="_hotel_destination_city">
+        </mat-form-field>
+    </li>
+    <li>
+        <mat-form-field appearance="fill">
+            <mat-label>Departure - Return</mat-label>
+            <mat-date-range-input [rangePicker]="date">
+                <input matStartDate placeholder="M/DD/YYYY" formControlName="hotel_booking_startdate">
+                <input matEndDate placeholder="M/DD/YYYY" formControlName="hotel_booking_enddate">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matPrefix [for]="date">
+                <mat-icon matDatepickerToggleIcon>calendar_month</mat-icon>
+            </mat-datepicker-toggle>
+            <mat-date-range-picker #date></mat-date-range-picker>
+        </mat-form-field>
+    </li>
+    <li>
+        <mat-form-field appearance="fill" matTooltip="{{travel}}">
+            <mat-label>Travellers</mat-label>
+            <mat-icon matPrefix class="material-icons-outlined">people</mat-icon>
+            <input matInput (click)="travellerDialog()" [formControl]="travellersFormControl" formControlName="_hotel_travellers" required="">
+            <mat-error align="end" *ngIf="travellersFormControl.hasError('required')">
+                Travellers info is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+    </li>
+    <!-- <li>
+        <mat-form-field appearance="fill">
+            <mat-label>Guests & Rooms</mat-label>
+            <mat-icon matPrefix class="material-icons-outlined">people</mat-icon>
+            <input matInput required="">
+        </mat-form-field>
+    </li> -->
+    <li>
+        <!-- <mat-form-field appearance="fill">
+            <mat-label>Where</mat-label>
+            <mat-icon matPrefix class="material-icons-outlined">search</mat-icon>
+            <input matInput placeholder="e.g. - Area, Landmark or Property Name">
+        </mat-form-field> -->
+        <mat-form-field appearance="fill">
+            <mat-label>Nationality </mat-label>
+            <mat-icon matPrefix class="material-icons-outlined" >flag</mat-icon>
+            <input matInput required="" formControlName="hotel_booking_nationality">
+        </mat-form-field>
+    </li>
+
+    <li>
+        <mat-form-field appearance="fill">
+            <mat-label>Residence Country </mat-label>
+            <mat-icon matPrefix class="material-icons-outlined">streetview</mat-icon>
+            <input matInput required="" formControlName="hotel_booking_resisdential_country">
+        </mat-form-field>
+    </li>
+    <li>
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <mat-icon matPrefix class="material-icons-outlined">perm_identity</mat-icon>
+            <input matInput required="" formControlName="hotel_booking_name">
+        </mat-form-field>
+    </li>
+    <li>
+        <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <mat-icon matPrefix class="material-icons-outlined">mail_outline</mat-icon>
+            <input matInput required="" formControlName="hotel_booking_email">
+        </mat-form-field>
+    </li>
+    <li>
+        <mat-form-field appearance="fill">
+            <mat-label>Phone no.</mat-label>
+            <mat-icon matPrefix class="material-icons-outlined">stay_current_portrait</mat-icon>
+            <input matInput required="" formControlName="hotel_booking_phone">
+        </mat-form-field>
+    </li>
+    <li>
+        <button mat-flat-button color="primary" class="btn-block btn-lg">Search</button>
+    </li>
+
+</ul>
+</form>

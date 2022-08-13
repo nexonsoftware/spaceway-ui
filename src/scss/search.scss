@@ -1,0 +1,175 @@
+@import '../variable.scss';
+.search {
+    &Element {
+        list-style: none;
+        padding: 0;
+        margin: 0 -0.625rem;
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            padding: 0 0.625rem;
+            width: calc(100%/3);
+            position: relative;
+        }
+    }
+    &Swap {
+        position: absolute;
+        left: 0;
+        top: calc(50% - 0.5em);
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+}
+
+::ng-deep .singel-line {
+    .searchElement {
+        li {
+            width: calc(100%/6)!important;
+        }
+    }
+}
+
+.room-qnt {
+    label {
+        font-size: 14px;
+        color: #7c7c7c;
+    }
+     ::ng-deep mat-button-toggle-group.qnt-btngroup {
+        align-items: center;
+        border: none;
+        button {
+            border: 1px solid #ddd;
+            border-radius: 0;
+            min-width: 10px;
+            padding: 0px 12px;
+            line-height: 33px;
+        }
+        input {
+            width: 60px;
+            height: 35px;
+            border-radius: 0;
+            border: 1px solid #ddd;
+            text-align: center;
+            background: #fff;
+            font-weight: bold;
+        }
+    }
+}
+
+.add-remove-btn {
+    border: none;
+}
+
+.add-room-btn {
+    font-size: 14px;
+    color: #7c7c7c;
+}
+
+.search_topback {
+    background: #0295fb;
+    padding: 30px 0;
+    .searchElement {
+        background: #fff;
+        padding: 15px 15px 0;
+        border-radius: 9px;
+    }
+}
+
+.visa_detailsback {
+    padding: 20px 0;
+    background: #fdfdfd;
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .section_heading {
+        background: #fff;
+        padding: 10px 12px;
+        box-shadow: 0px 0px 4px #ddd;
+        margin-bottom: 10px;
+        h3 {
+            font-size: 19px;
+            color: #838383;
+        }
+    }
+    .add_member {
+        background: #fff;
+        padding: 10px 12px 17px;
+        box-shadow: 0px 0px 4px #ddd;
+        margin-bottom: 10px;
+        mat-icon {
+            vertical-align: middle;
+            color: #afafaf;
+            margin-right: 11px;
+        }
+         ::ng-deep mat-form-field {
+            .mat-form-field-wrapper {
+                padding-bottom: 0;
+            }
+            .mat-form-field-infix {
+                padding: 5px 0 0.5em 0
+            }
+            .mat-form-field-label-wrapper {
+                top: -5px;
+            }
+            .mat-form-field-underline {
+                height: 40px;
+                &:before {
+                    border-radius: 0;
+                }
+            }
+            .mat-select-arrow-wrapper {
+                transform: translateY(0%);
+            }
+        }
+    }
+    .section_guarantordetails {
+        background: #fff;
+        padding: 10px 12px 17px;
+        box-shadow: 0px 0px 4px #ddd;
+        margin-bottom: 10px;
+         ::ng-deep mat-form-field {
+            .mat-form-field-wrapper {
+                padding-bottom: 0;
+            }
+            .mat-form-field-infix {
+                padding: 5px 0 0.5em 0
+            }
+            .mat-form-field-label-wrapper {
+                top: -5px;
+            }
+            .mat-form-field-underline {
+                height: 40px;
+                &:before {
+                    border-radius: 0;
+                }
+            }
+            .mat-select-arrow-wrapper {
+                transform: translateY(0%);
+            }
+        }
+    }
+    .visa_rightsidebar {
+        background: #fff;
+        padding: 10px 12px 17px;
+        box-shadow: 0px 0px 4px #ddd;
+        margin-bottom: 10px;
+        table {
+            tr {
+                td {
+                    font-size: 14px;
+                    color: #5e5e5e;
+                    padding: 7px 5px;
+                }
+            }
+            &.table-bordered {
+                border-top: 0;
+                tr:last-child {
+                    td {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

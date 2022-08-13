@@ -1,0 +1,85 @@
+<form [formGroup]="_insuranceSearchForm" (ngSubmit)="insuranceSearchSubmit()">
+    <ul class="searchElement">
+        
+        <li class="">
+            <mat-form-field appearance="fill">
+                <mat-label>Country Of Residence</mat-label>
+                <mat-icon matPrefix class="material-icons-outlined" >flag</mat-icon>
+                <mat-select placeholder="select Residence" formControlName="residence">
+                    <mat-select-filter [array]="variables" (filteredReturn)="filteredList1 =$event"></mat-select-filter>
+                    <mat-option *ngFor="let item of filteredList1" [value]="item">
+                        {{item}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </li>
+        <li class="">
+            <mat-form-field appearance="fill">
+                <mat-label>Destination</mat-label>
+                <mat-icon matPrefix class="material-icons-outlined" >flag</mat-icon>
+                <mat-select placeholder="select Destination" formControlName="destination">
+                    <mat-select-filter [array]="variables2" (filteredReturn)="filteredList2 =$event"></mat-select-filter>
+                    <mat-option *ngFor="let item of filteredList2" [value]="item">
+                        {{item}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </li>
+        <li>
+            <mat-form-field appearance="fill" class="example-form-field">
+                <mat-label>Departure date</mat-label>
+                <input matInput [matDatepicker]="datepicker" formControlName="departure_date">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+                <mat-datepicker #datepicker>
+                  <mat-datepicker-actions>
+                    <button mat-button matDatepickerCancel>Cancel</button>
+                    <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+                  </mat-datepicker-actions>
+                </mat-datepicker>
+              </mat-form-field>
+        </li>
+        <li>
+            <mat-form-field appearance="fill" class="example-form-field">
+                <mat-label>Return date</mat-label>
+                <input matInput [matDatepicker]="datepicker2" formControlName="return_date">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="datepicker2"></mat-datepicker-toggle>
+                <mat-datepicker #datepicker2>
+                  <mat-datepicker-actions>
+                    <button mat-button matDatepickerCancel>Cancel</button>
+                    <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+                  </mat-datepicker-actions>
+                </mat-datepicker>
+              </mat-form-field>
+        </li>
+        <li class="w-100 ">
+
+            <mat-divider></mat-divider>
+            <div class="d-flex room-qnt">
+                <div class="mr-3">
+                    <label class="d-block mb-2">Adult(s)</label>
+                    <mat-button-toggle-group class="qnt-btngroup">
+                        <button mat-raised-button color="primary" type="button" (click)="minus()">-</button>
+                        <input type="text" [value]="quantity" formControlName="no_of_adult"  [disabled]="isDisabled" value="1">
+                        <button mat-raised-button color="primary" type="button" (click)="plus()">+</button>
+                    </mat-button-toggle-group>
+                </div>
+                <div class="">
+                    <label class="d-block mb-2">Child(ren)</label>
+                    <mat-button-toggle-group class="qnt-btngroup">
+                        <button mat-raised-button color="primary" type="button" (click)="minuschild()">-</button>
+                        <input type="text" [value]="quantchild" formControlName="no_of_child" [disabled]="isDisabled" value="0">
+                        <button mat-raised-button color="primary" type="button" (click)="pluschild()">+</button>
+                    </mat-button-toggle-group>
+                </div>
+            </div>
+    
+            <mat-divider></mat-divider>
+        </li>
+        <li>
+            <button mat-flat-button color="primary" class="btn-block btn-lg">Search</button>
+        </li>
+    
+    </ul>
+    </form>

@@ -1,0 +1,48 @@
+<div class="userMenu">
+	<div class="userBox">
+		<div class="user-cover">
+			
+		</div>
+		<div class="user-image">
+			<span>JD</span>
+		</div>
+		<div class="user-details">
+			<div class="user-name">Johnny Deo</div>
+			<div class="user-email">johnny.deo@buchheit</div>
+		</div>
+	</div>
+	<ul class="userNav">
+	  <li matRipple [routerLink]="['/profile']" routerLinkActive="active">
+	    <mat-icon class="material-icons-outlined">account_circle</mat-icon>
+	    <span>Your Profile</span>
+	  </li>
+	  <li matRipple [routerLink]="['/password']" routerLinkActive="active">
+	    <mat-icon class="material-icons-outlined">lock</mat-icon>
+	    <span>Reset Password</span>
+	  </li>
+	  <li matRipple [routerLink]="['/notification']"  routerLinkActive="active">
+	    <mat-icon class="material-icons-outlined">notifications</mat-icon>
+	    <span>Notification</span>
+	  </li>
+	  <li matRipple [routerLink]="['/history']"  routerLinkActive="active">
+	    <mat-icon class="material-icons-outlined">inventory</mat-icon>
+	    <span>Your Translation</span>
+	  </li>
+	  <li matRipple [routerLink]="['/wishlist']"  routerLinkActive="active">
+	    <mat-icon class="material-icons-outlined">favorite_border</mat-icon>
+	    <span>Your Favorite Tour</span>
+	  </li>
+	  <!-- <li matRipple [routerLink]="['/as']"  routerLinkActive="active">
+	    <mat-icon class="material-icons-outlined">payment</mat-icon>
+	    <span>Your Card</span>
+	  </li> -->
+	  <li matRipple [routerLink]="['/offer']" routerLinkActive="active">
+	    <mat-icon class="material-icons-outlined">redeem</mat-icon>
+	    <span>Offer</span>
+	  </li>
+	  <li matRipple [routerLink]="['/']" >
+	    <mat-icon class="material-icons-outlined">logout</mat-icon>
+	    <span>Sign Out</span>
+	  </li>
+	</ul>
+</div>

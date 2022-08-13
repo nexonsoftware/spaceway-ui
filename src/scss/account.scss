@@ -1,0 +1,41 @@
+@import '../variable.scss';
+.account{
+  $this: &;
+  &-wrapper{display: flex;}
+  &-menu{width: 20rem; position: sticky;top: 5rem;align-self: flex-start;
+    & + #{$this}-details{margin-inline-start: 1.25rem;max-width: calc(100% - 21.25rem); }
+  }
+  &-details{max-width: 100%;flex-grow: 1;flex-basis: 0;}
+  &-location{display: flex;width: 100%;
+    & + #{$this}-location{margin-block-start: 0.625rem;padding-block-start: 0.625rem;border-top: darken($white,25%) solid 0.0625rem ;}
+  }
+}
+.file-upload{padding-bottom: 0.9375rem;margin: .25em 0 0;position: relative;display: inline-flex;width: auto;cursor: pointer;width: 100%;
+  .pic-box{width: 8.75rem;height: 10rem;background-color: #EDEDED;border:darken($white,40%) solid 0.0625rem;border-radius: 0.25rem;margin-right: 0.9375rem;position: relative;display: flex;align-items: center;justify-content: center;color: #757575;overflow: hidden;
+    mat-icon{font-size: 5rem;width: auto;height: auto;}
+  }
+  
+  .pic-view{position: absolute;width: 100%;height: 100%;z-index: 3;left: 0;top:0;display: flex;align-items: center;justify-content: center;border-radius: 0.25rem;
+    img{width: 100%;height: 100%;object-fit: cover;}
+  }
+  .pic-details{max-width: 100%;width: calc(100% - 11.25rem);margin-block-start: auto;}
+  .pic-name{color: darken($white,75%) ;width: 100%; /*white-space: nowrap; text-overflow: ellipsis;overflow: hidden; */
+    span{display: block;font-size: 0.75rem;color: darken($white,40%) ;width: 100%;}   
+  }
+  .pic-btn{padding: 0.625rem 0; position: relative;cursor: pointer;}
+  .pic-clear{position: absolute; right: 0;top: 0; width: 1.875rem;height: 1.875rem; border-radius: 0 0.25rem 0 0.25rem;background-color: $secondary; color: $white;display: flex;align-items: center;justify-content: center;-webkit-transition: all .3s;transition: all .3s;
+    mat-icon{width: 100%;height: 100%;font-size: 0.9375rem;display: flex;align-items: center;justify-content: center;}
+  }
+  &:hover , &.active{
+    .pic-clear{right: 0;top: 0; }
+  }
+  &.active{
+    .pic-clear{
+      mat-icon{display: block;}
+    }
+  }
+  input{position: absolute;width: 100%;height: 100%;left: 0;top: 0;z-index: 2;opacity: 0;}
+  .mat-error{display: inline-flex;align-items: center;margin: 0;padding:0 .75rem;position:absolute;bottom: -0.5rem;right: .5rem; font-size: .625rem;background-color: $warn;color: #fff;border-radius: .25rem;
+    &:before{content: "";position: absolute;right: .25rem;top: -.75rem;border: .375rem solid transparent;border-bottom-color: $warn;}     
+  }
+}

@@ -1,0 +1,48 @@
+<form [formGroup]="_visaForm" (ngSubmit)="visaSubmit()">
+    <ul class="searchElement">
+        
+        <li class="">
+            
+            <mat-form-field appearance="fill">
+                <mat-label>I am looking for a visa to</mat-label>
+                <mat-icon matPrefix class="material-icons-outlined" >flag</mat-icon>
+                <mat-select placeholder="I am looking for a visa to" formControlName="visa_destination">
+                    <mat-select-filter [array]="variables" (filteredReturn)="filteredList1 =$event"></mat-select-filter>
+                    <mat-option *ngFor="let item of filteredList1" [value]="item">
+                        {{item}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </li>
+        <li>
+            <mat-form-field appearance="fill">
+                <mat-label>Select a visa type</mat-label>
+                <mat-icon matPrefix class="material-icons-outlined"
+                >work</mat-icon
+                >
+                <mat-select placeholder="select a visa type" formControlName="visa_type">
+                    <mat-select-filter [array]="variables2" (filteredReturn)="filteredList2 =$event"></mat-select-filter>
+                    <mat-option *ngFor="let item of filteredList2" [value]="item">
+                        {{item}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </li>
+        <li>
+            <mat-form-field appearance="fill">
+                <mat-label>Select Nationality</mat-label>
+                <mat-icon matPrefix class="material-icons-outlined" >flag</mat-icon>
+                <mat-select placeholder="select Nationality" formControlName="nationality">
+                    <mat-select-filter [array]="variables3" (filteredReturn)="filteredList3 =$event"></mat-select-filter>
+                    <mat-option *ngFor="let item of filteredList3" [value]="item">
+                        {{item}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </li>
+        <li>
+            <button mat-flat-button color="primary" class="btn-block btn-lg">Search</button>
+        </li>
+    </ul>
+</form>
+    

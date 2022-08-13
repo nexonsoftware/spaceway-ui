@@ -1,0 +1,17 @@
+@import '../../variable.scss';
+.offerSlider ::ng-deep{
+	.owl{
+		&-carousel {
+			.owl-nav{margin: 0;
+			  [class*=owl-]{background-color: $white;color: $accent;position: absolute;top: 50%;transform: translateY(-50%);z-index: 5;margin: 0;padding: 0;display: flex;align-items: center;justify-content: center;line-height: 1; width: 2.5rem;height: 2.5rem;border-radius: 50%;font-family: 'Material Icons';font-size: 1.875em;
+			  	&:hover{background-color:  darken($white,10%);}
+				}
+				.owl-prev{left: 0; margin-inline-start:  3.125rem;}
+				.owl-next{right: 0;margin-inline-end:  3.125rem;}
+			}
+		}
+		&-theme{
+			.owl-dots{position: absolute;bottom: 0;width: 100%;}
+		}
+	}
+}

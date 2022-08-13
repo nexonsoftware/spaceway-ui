@@ -1,0 +1,6 @@
+@import '../../variable.scss';
+ul.tourListing.listView{list-style: none;padding: 0;margin:0 ;
+	&>li{width: 100%;padding: 0.9375rem 0;
+		& + li{	border-block-start: darken($white,10%) solid 0.0625rem;}
+	}
+}

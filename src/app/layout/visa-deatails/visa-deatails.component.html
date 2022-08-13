@@ -1,0 +1,248 @@
+<app-header></app-header>
+<form [formGroup]="_visaForm" (ngSubmit)="visaSubmit()">
+    <section class="search_topback">
+        <div class="container">
+
+            <ul class="searchElement">
+
+                <li class="">
+                    <mat-form-field appearance="fill">
+                        <mat-label>I am looking for a visa to</mat-label>
+                        <mat-icon matPrefix class="material-icons-outlined">flag</mat-icon>
+                        <mat-select placeholder="I am looking for a visa to" formControlName="visa_destination">
+                            <mat-select-filter [array]="variables" (filteredReturn)="filteredList1 =$event"></mat-select-filter>
+                            <mat-option *ngFor="let item of filteredList1" [value]="item">
+                                {{item}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </li>
+                <li>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Select a visa type</mat-label>
+                        <mat-icon matPrefix class="material-icons-outlined">work</mat-icon>
+                        <mat-select placeholder="select a visa type" formControlName="visa_type" [(ngModel)]="seletedVisaType">
+                            <mat-select-filter [array]="variables2" (filteredReturn)="filteredList2 =$event"></mat-select-filter>
+                            <mat-option *ngFor="let item of filteredList2" [value]="item">
+                                {{item}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </li>
+                <li>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Select Nationality</mat-label>
+                        <mat-icon matPrefix class="material-icons-outlined">flag</mat-icon>
+                        <mat-select placeholder="select Nationality" formControlName="nationality">
+                            <mat-select-filter [array]="variables3" (filteredReturn)="filteredList3 =$event"></mat-select-filter>
+                            <mat-option *ngFor="let item of filteredList3" [value]="item">
+                                {{item}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </li>
+                <li>
+                    <mat-form-field appearance="fill" matTooltip="{{ visa }}">
+                        <mat-label>Travellers</mat-label>
+                        <mat-icon matPrefix class="material-icons-outlined">people</mat-icon>
+                        <input matInput (click)="visatravellerDialog()" formControlName="visaFormControl" required autocomplete="off" />
+                        <mat-error align="end" *ngIf="
+                      _visaForm.controls['visaFormControl'].hasError('required')
+                      ">
+                            Travellers info is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </li>
+                <!-- <li>
+                    <button mat-flat-button color="primary" class="btn-block btn-lg">Search</button>
+                </li> -->
+            </ul>
+        </div>
+    </section>
+    <section class="visa_detailsback">
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-8 col-lg-8 ">
+                    <div class="section_heading">
+                        <h3>Visitor Details</h3>
+                    </div>
+                    
+                    <div class="add_member">
+                        <ng-container formArrayName="arr"
+                    *ngFor="let item of arr.controls; let i = index">
+                        <ng-container [formGroupName]="i">
+                            <div class="visa_memberlist mb-3">
+                                <div class="row no-gutters align-items-center ">
+                                    <div class="col-md-12 col-lg-2">
+                                        <mat-icon matPrefix class="material-icons-outlined">people</mat-icon> Adult {{i+1}}
+                                    </div>
+                                    <div class="col-md-2 col-lg-1">
+                                        <mat-form-field appearance="fill">
+                                            <mat-select placeholder="Title" formControlName="adult_title">
+                                                <mat-select-filter [array]="variables4" (filteredReturn)="filteredList4 =$event"></mat-select-filter>
+                                                <mat-option>Title</mat-option>
+                                                <mat-option *ngFor="let item of filteredList4" [value]="item">
+                                                    {{item}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-3 col-lg-3">
+                                        <mat-form-field appearance="fill">
+                                            <input matInput required="" formControlName="adult_first_name" placeholder="First Name">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-3 col-lg-3">
+                                        <mat-form-field appearance="fill">
+                                            <input matInput required="" formControlName="adult_last_name" placeholder="Last Name">
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-4 col-lg-3">
+                                        <mat-form-field appearance="fill">
+                                            <mat-select placeholder="Select Nationality" formControlName="adult_nationality">
+                                                <mat-select-filter [array]="variables3" (filteredReturn)="filteredList6 =$event"></mat-select-filter>
+                                                <mat-option *ngFor="let item of filteredList6" [value]="item">
+                                                    {{item}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+    
+                                </div>
+                            </div>     
+                            </ng-container>
+                            </ng-container>
+                            <ng-container formArrayName="arr2"
+                            *ngFor="let item of arr2.controls; let i = index">
+                                <ng-container [formGroupName]="i"> 
+                        <div class="visa_memberlist mb-3" *ngIf="_noOfChildrens >= 1">
+                            <div class="row no-gutters align-items-center ">
+                                <div class="col-md-12 col-lg-2">
+                                    <mat-icon matPrefix class="material-icons-outlined">people</mat-icon> Child {{i+1}}
+                                </div>
+                                <div class="col-md-2 col-lg-1">
+                                    <mat-form-field appearance="fill">
+                                        <mat-select placeholder="Title" formControlName="child_title">
+                                            <mat-select-filter [array]="variables4" (filteredReturn)="filteredList5 =$event"></mat-select-filter>
+                                            <mat-option>Title</mat-option>
+                                            <mat-option *ngFor="let item of filteredList5" [value]="item">
+                                                {{item}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-3 col-lg-3">
+                                    <mat-form-field appearance="fill">
+                                        <input matInput required="" formControlName="child_first_name" placeholder="First Name">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-3 col-lg-3">
+                                    <mat-form-field appearance="fill">
+                                        <input matInput required="" formControlName="child_last_name" placeholder="Last Name">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4 col-lg-3">
+                                    <mat-form-field appearance="fill">
+                                        <mat-select placeholder="Select Nationality" formControlName="child_nationality">
+                                            <mat-select-filter [array]="variables3" (filteredReturn)="filteredList7 =$event"></mat-select-filter>
+                                            <mat-option *ngFor="let item of filteredList7" [value]="item">
+                                                {{item}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-lg-10 offset-lg-2">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <label>Date of Birth</label>
+                                        </div>
+                                        <div class="row no-gutters">
+                                            <div class="col-md-12">
+                                                <mat-form-field appearance="fill">
+                                                    <input matInput [matDatepicker]="picker" formControlName="child_dob">
+                                                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                                    <mat-datepicker #picker></mat-datepicker>
+                                                </mat-form-field>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                
+                </ng-container>
+                    </div>
+                    <div class="add_morebtn text-right pt-2 pb-3">
+                        <button type="button" mat-button class="" (click)="visatravellerDialog()">+ Add more</button>
+                    </div>
+                    <div class="section_heading">
+                        <h3>Guarantor Details</h3>
+                    </div>
+                    <div class="section_guarantordetails">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Guarantor Name</label>
+                                <mat-form-field appearance="fill">
+                                    <input matInput required="" formControlName="gurarantor_name" placeholder="Guarantor Name">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-4">
+                                <label>Email</label>
+                                <mat-form-field appearance="fill">
+                                    <input matInput required="" formControlName="gurarantor_email" placeholder="email">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label>Mobile Number</label>
+                                <mat-form-field appearance="fill">
+                                    <input matInput required="" formControlName="gurarantor_phone" placeholder="Phone Number">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 pl-0">
+                    <div class="section_heading">
+                        <h3>Visa Summary</h3>
+                    </div>
+                    <div class="visa_rightsidebar">
+                        <div class="">
+                            <table class="table">
+                                <tr>
+                                    <td>Type of Visa</td>
+                                    <td><b>{{seletedVisaType}}</b></td>
+                                </tr>
+                                <tr>
+                                    <td>No. of Applicants</td>
+                                    <td><b>{{_total_travellers}}</b></td>
+                                </tr>
+                            </table>
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td>Visa Fee</td>
+                                    <td class="text-right"><b>AED 395</b></td>
+                                </tr>
+                                <tr>
+                                    <td>Security Deposit</td>
+                                    <td class="text-right"><b>AED 0</b></td>
+                                </tr>
+                                <tr>
+                                    <td>Total Amount</td>
+                                    <td class="text-right"><b>AED 395</b></td>
+                                </tr>
+                            </table>
+                            <button mat-flat-button color="primary" class="btn-block btn-lg">continue</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
+<app-footer></app-footer>
